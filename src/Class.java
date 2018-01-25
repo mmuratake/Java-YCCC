@@ -5,7 +5,7 @@ public class Class {
 	{
 		// Just to remind you what the heck you need to do with Git.
 		
-		// Save often, save often.
+		// Save early, save often.
 		
 		// Drag from Unstaged Changes to Staged Changes, often, often. Otherwise you lose it.
 		
