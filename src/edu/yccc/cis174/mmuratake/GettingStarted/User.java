@@ -5,6 +5,7 @@ public class User {
 	public String userName;
 	public String userAge;
 	public String userGender;
+	
 	public String getUserName() {
 		return userName;
 	}
