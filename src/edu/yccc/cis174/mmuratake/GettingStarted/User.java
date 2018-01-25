@@ -3,7 +3,7 @@ package edu.yccc.cis174.mmuratake.GettingStarted;
 public class User {
 	
 	public String userName;
-	public String userAge;
+	public int userAge;
 	public String userGender;
 	
 	public String getUserName() {
@@ -12,10 +12,10 @@ public class User {
 	public void setUserName(String userName) {
 		this.userName = userName;
 	}
-	public String getUserAge() {
+	public int getUserAge() {
 		return userAge;
 	}
-	public void setUserAge(String userAge) {
+	public void setUserAge(int userAge) {
 		this.userAge = userAge;
 	}
 	public String getUserGender() {
