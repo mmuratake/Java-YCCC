@@ -1,6 +1,13 @@
 package edu.yccc.cis174.mmuratake.GettingStarted;
 
-
+/**
+ * @author smamimuratake
+ * January 29 2018
+ * Assignment #1: Getting Started
+ * 
+ * Assign attributes to the object User.
+ * 
+ */
 
 
 public class CreateUsers {

@@ -1,5 +1,14 @@
 package edu.yccc.cis174.mmuratake.GettingStarted;
 
+/**
+ * @author smamimuratake
+ * January 29 2018
+ * Assignment #1: Getting Started
+ * 
+ * Creating the object User.
+ * 
+ */
+
 public class User {
 	
 	public String userName;
