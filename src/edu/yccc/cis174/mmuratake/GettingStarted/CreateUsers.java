@@ -1,9 +1,14 @@
 package edu.yccc.cis174.mmuratake.GettingStarted;
 
+
+
+
 public class CreateUsers {
 	
 	public static void main (String[] args)
 	{
+		// Create three users.
+		
 		User u = new User();
 		u.setUserName("Stanford");
 		u.setUserAge(13);
@@ -25,7 +30,7 @@ public class CreateUsers {
 		System.out.println(u2.getUserName() + ", " + u2.getUserAge() + " years old; " + u2.getUserGender());
 		System.out.println("User #3");
 		System.out.println(u3.getUserName() + ", " + u3.getUserAge() + " years old; " + u3.getUserGender());
-		
 	}
+	
 
 }
