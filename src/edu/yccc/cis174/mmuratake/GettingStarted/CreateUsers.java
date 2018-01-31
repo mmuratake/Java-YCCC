@@ -8,7 +8,8 @@ import java.util.List;
  * January 29 2018
  * Assignment #1: Getting Started
  * 
- * Assign attributes to the object User using getters and setters.
+ * Assign attributes to the object User.
+ * Also create a list with some of the users in it.
  * 
  */
 
@@ -18,7 +19,7 @@ public class CreateUsers {
 	// Create list of users.
 	List<User> users = new ArrayList<User>();
 	
-	public void main (String[] args)
+	public void createList()
 	{
 		// Create three users.
 		
@@ -51,6 +52,13 @@ public class CreateUsers {
 		users.remove(u2);
 		
 		System.out.println(users);
+		// Even though you can't tell anything about the attributes of the users, you can tell that there are only two in the list.
+	}
+	
+	public static void main(String[] args)
+	{
+		CreateUsers c = new CreateUsers();
+		c.createList();
 	}
 		
 
