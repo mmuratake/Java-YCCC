@@ -11,7 +11,6 @@ import java.util.List;
  * Assign attributes to the object User.
  * Also create a list with some of the users in it.
  * Add a for loop and if-else statements regarding the list.
- * 
  */
 
 
@@ -60,7 +59,8 @@ public class CreateUsers {
 			System.out.println();
 			System.out.println("Hi, I'm User #" + userNumber + " in this user list.");
 			System.out.println(users.get(x));
-			// Even though you can't tell anything about the attributes of the users, you can tell that there are only two in the list.
+			// Even though you can't tell anything about the attributes of the users, 
+			// you can tell that there are only two in the list.
 		}
 				
 				
@@ -77,7 +77,6 @@ public class CreateUsers {
 		{
 			System.out.println(">There is a potential that there are no females in this list!\r\n");
 		}
-	
 	}
 	
 	public static void main(String[] args)
@@ -92,7 +91,6 @@ public class CreateUsers {
 	 * 	2. Encapsulation: Putting objects together to get the larger picture.
 	 * 	3. Inheritance: Taking on the attributes of the parent object.
 	 * 	4. Polymorphism: Being able to take on many forms.
-	 * 
 	 */
-
+	
 }
