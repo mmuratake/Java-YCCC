@@ -49,6 +49,8 @@ public class CreateUsers {
 		users.add(u2);
 		users.add(u3);
 		users.remove(u2);
+		
+		System.out.println(users);
 	}
 		
 
