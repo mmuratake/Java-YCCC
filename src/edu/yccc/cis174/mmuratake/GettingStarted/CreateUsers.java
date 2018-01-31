@@ -10,6 +10,7 @@ import java.util.List;
  * 
  * Assign attributes to the object User.
  * Also create a list with some of the users in it.
+ * Add a for loop and if-else statements regarding the list.
  * 
  */
 
@@ -84,5 +85,14 @@ public class CreateUsers {
 		CreateUsers c = new CreateUsers();
 		c.messWithUserList();
 	}
+	
+	/**
+	 * The 4 Pillars of Object Oriented Programming:
+	 * 	1. Abstraction: Deciding what the user can see and what the user can't in order to reduce complexity.
+	 * 	2. Encapsulation: Putting objects together to get the larger picture.
+	 * 	3. Inheritance: Taking on the attributes of the parent object.
+	 * 	4. Polymorphism: Being able to take on many forms.
+	 * 
+	 */
 
 }
