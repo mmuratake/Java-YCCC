@@ -19,7 +19,7 @@ public class CreateUsers {
 	// Create list of users.
 	List<User> users = new ArrayList<User>();
 	
-	public void createList()
+	public void messWithUserList()
 	{
 		// Create three users.
 		
@@ -53,12 +53,32 @@ public class CreateUsers {
 		
 		System.out.println(users);
 		// Even though you can't tell anything about the attributes of the users, you can tell that there are only two in the list.
+		
+		// If-Else statements about the list of users.
+		if(users.contains(u))
+		{
+			System.out.println("There is a male in here!");
+		}
+		else
+		{
+			System.out.println("There is a potential that all users are female.");
+		}
+		if(!users.contains(u2) && users.contains(u))
+		{
+			System.out.println("There is a potential that there are no females here!");
+		}
+		
+		// A for loop with the list of users.
+		for(int x = 0; x < users.size(); x++)
+		{
+			System.out.println(users.get(x));
+		}
 	}
 	
 	public static void main(String[] args)
 	{
 		CreateUsers c = new CreateUsers();
-		c.createList();
+		c.messWithUserList();
 	}
 		
 
