@@ -5,7 +5,7 @@ package edu.yccc.cis174.mmuratake.GettingStarted;
  * January 29 2018
  * Assignment #1: Getting Started
  * 
- * Assign attributes to the object User.
+ * Assign attributes to the object User using getters and setters.
  * 
  */
 
