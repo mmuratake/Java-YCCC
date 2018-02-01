@@ -11,7 +11,7 @@ public class UserLists {
 		
 		// Be CAREFUL with list names!! It's very difficult...
 		
-		// The thing inside List<here> is named after the Class of what you want to put in there. The Class with the getters and setters.
+		// The thing inside List<*here*> is named after the Class of what you want to put in there. The Class with the getters and setters.
 		// I think.
 		List<Users> users = new ArrayList<Users>();
 		
@@ -26,7 +26,16 @@ public class UserLists {
 	
 	public static void main(String[] args)
 	{
+		UserLists us = new UserLists();
+		List<Users> myUsers = us.loadUsers();
 		
+		for(Users user2 : myUsers)
+		{
+			System.out.println(user2);
+			// System.out.println(user2.getFirstName() + " " + user2.getLastName());
+			
+			// You don't need the above code anymore because you assigned it in toString! Neat!
+		}
 	}
 
 }

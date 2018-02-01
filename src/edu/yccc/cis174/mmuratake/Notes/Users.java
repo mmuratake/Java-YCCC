@@ -42,5 +42,12 @@ public class Users {
 	{
 		this.password = password;
 	}
+	
+	
+	// If someone ever calls toString, call this one, not the default.
+	public String toString()
+	{
+		return firstName + " " + lastName;
+	}
 
 }
