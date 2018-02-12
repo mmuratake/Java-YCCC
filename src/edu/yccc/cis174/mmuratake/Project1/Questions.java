@@ -1,5 +1,13 @@
 package edu.yccc.cis174.mmuratake.Project1;
 
+/**
+ * 
+ * @author MamiMuratake
+ * February 14 2018
+ * Project #1: Java Test
+ *
+ */
+
 public class Questions {
 	
 	String question;
@@ -66,7 +74,7 @@ public class Questions {
 	
 	public String toString()
 	{
-		return question + " " + answer;
+		return question + "\r\n" + choiceA + "\r\n" + choiceB + "\r\n" + choiceC + "\r\n";
 	}
 	
 }

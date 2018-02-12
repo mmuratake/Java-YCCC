@@ -50,7 +50,8 @@ public class JavaTest {
 		
 		for(Questions questions2 : testQuestions)
 		{
-			System.out.println("Something");
+			System.out.println(questions2.getQuestion());
+			
 		}
 		
 		
