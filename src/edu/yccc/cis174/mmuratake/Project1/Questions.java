@@ -8,6 +8,21 @@ public class Questions {
 	String choiceB;
 	String choiceC;
 	
+	public Questions(String question, String answer, String choiceA, String choiceB, String choiceC)
+	{
+		this.question = question;
+		this.answer = answer;
+		this.choiceA = choiceA;
+		this.choiceB = choiceB;
+		this.choiceC = choiceC;
+	}
+	
+	public Questions(String question, String answer)
+	{
+		this.question = question;
+		this.answer = answer;
+	}
+	
 	public String getChoiceA() 
 	{
 		return choiceA;
