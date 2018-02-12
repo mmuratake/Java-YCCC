@@ -26,6 +26,7 @@ public class UserLists {
 	
 	public static void main(String[] args)
 	{
+		// Create an instance of this class.
 		UserLists us = new UserLists();
 		List<Users> myUsers = us.loadUsers();
 		

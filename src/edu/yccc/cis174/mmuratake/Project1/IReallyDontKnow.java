@@ -2,6 +2,11 @@ package edu.yccc.cis174.mmuratake.Project1;
 
 public class IReallyDontKnow {
 	
+	public static void ask()
+	{
+		
+	}
+	
 	public static void main(String[] args)
 	{
 		Questions q = new Questions();
