@@ -13,7 +13,7 @@ public class JavaTest {
 		
 	}
 	
-	public static List<Questions> loadQuestions()
+	public List<Questions> loadQuestions()
 	{
 		List<Questions> questions = new ArrayList<Questions>();
 		
@@ -45,20 +45,14 @@ public class JavaTest {
 	
 	public static void main(String[] args)
 	{
+		JavaTest jv = new JavaTest();
+		List<Questions> testQuestions = jv.loadQuestions();
 		
-		
-		UserLists us = new UserLists();
-		List<Users> myUsers = us.loadUsers();
-		
-		for(Users user2 : myUsers)
+		for(Questions questions2 : testQuestions)
 		{
-			System.out.println(user2);
-			// System.out.println(user2.getFirstName() + " " + user2.getLastName());
-			
-			// You don't need the above code anymore because you assigned it in toString! Neat!
+			System.out.println("Something");
 		}
 		
-
 		
 	}
 	
