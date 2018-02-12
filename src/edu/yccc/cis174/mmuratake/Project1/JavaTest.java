@@ -1,10 +1,14 @@
 package edu.yccc.cis174.mmuratake.Project1;
 
+/**
+ * Mami Muratake
+ * February 14 2018
+ * Project #1: Java Test
+ * 
+ */
+
 import java.util.ArrayList;
 import java.util.List;
-
-import edu.yccc.cis174.mmuratake.Notes.UserLists;
-import edu.yccc.cis174.mmuratake.Notes.Users;
 
 public class JavaTest {
 	
