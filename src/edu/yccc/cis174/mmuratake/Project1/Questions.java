@@ -64,4 +64,9 @@ public class Questions {
 		this.answer = answer;
 	}
 	
+	public String toString()
+	{
+		return question + " " + answer;
+	}
+	
 }

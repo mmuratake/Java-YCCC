@@ -3,7 +3,10 @@ package edu.yccc.cis174.mmuratake.Project1;
 import java.util.ArrayList;
 import java.util.List;
 
-public class IReallyDontKnow {
+import edu.yccc.cis174.mmuratake.Notes.UserLists;
+import edu.yccc.cis174.mmuratake.Notes.Users;
+
+public class JavaTest {
 	
 	public static void ask()
 	{
@@ -43,6 +46,17 @@ public class IReallyDontKnow {
 	public static void main(String[] args)
 	{
 		
+		
+		UserLists us = new UserLists();
+		List<Users> myUsers = us.loadUsers();
+		
+		for(Users user2 : myUsers)
+		{
+			System.out.println(user2);
+			// System.out.println(user2.getFirstName() + " " + user2.getLastName());
+			
+			// You don't need the above code anymore because you assigned it in toString! Neat!
+		}
 		
 
 		
