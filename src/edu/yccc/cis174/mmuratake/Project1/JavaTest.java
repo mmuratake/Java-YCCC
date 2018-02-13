@@ -8,9 +8,6 @@ package edu.yccc.cis174.mmuratake.Project1;
  */
 
 
-// Now need user input!!
-
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -48,11 +45,6 @@ public class JavaTest {
 		return questions;
 	}
 	
-	public static void check()
-	{
-		
-	}
-	
 	
 	public static void main(String[] args)
 	{
@@ -74,6 +66,7 @@ public class JavaTest {
 			{
 				System.out.println(questions2);
 				questions2.setUserAnswer(console.next());
+				
 				if(questions2.getUserAnswer().toUpperCase().equals(questions2.getAnswer()))
 				{
 					grade +=10;
@@ -84,6 +77,7 @@ public class JavaTest {
 			{
 				System.out.println("\r\n" + questions2.getQuestion());
 				questions2.setUserAnswer(console.next());
+				
 				if(questions2.getUserAnswer().equals(questions2.getAnswer()))
 				{
 					grade +=10;
