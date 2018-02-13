@@ -12,11 +12,6 @@ import java.util.List;
 
 public class JavaTest {
 	
-	public static void ask()
-	{
-		
-	}
-	
 	public List<Questions> loadQuestions()
 	{
 		List<Questions> questions = new ArrayList<Questions>();
@@ -61,12 +56,14 @@ public class JavaTest {
 		
 		for(Questions questions2 : testQuestions)
 		{
-			System.out.println(questions2.getQuestion());
 			if(questions2.getChoiceA() != null)
 			{
 				System.out.println(questions2);
 			}
-			
+			else
+			{
+				System.out.println(questions2.getQuestion());
+			}
 			
 		}
 		
