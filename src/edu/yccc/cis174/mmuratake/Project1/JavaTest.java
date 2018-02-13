@@ -7,6 +7,10 @@ package edu.yccc.cis174.mmuratake.Project1;
  * 
  */
 
+
+// Now need user input!!
+
+
 import java.util.ArrayList;
 import java.util.List;
 
