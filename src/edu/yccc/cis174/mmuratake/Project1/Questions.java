@@ -16,18 +16,7 @@ public class Questions {
 	String choiceB;
 	String choiceC;
 	Boolean points;
-	int grade;
-
-	public int getGrade() 
-	{
-		return grade;
-	}
-
-	public void setGrade(int grade) 
-	{
-		this.grade = grade;
-	}
-
+	
 	public Questions(String question, String answer, String choiceA, String choiceB, String choiceC)
 	{
 		this.question = question;

@@ -64,6 +64,8 @@ public class JavaTest {
 		System.out.println("   For questions with no choices, please write out the code directly.");
 		System.out.println("\r\nGood luck! \r\n ");
 		
+		int grade = 0;
+		
 		for(Questions questions2 : testQuestions)
 		{
 			Questions q = new Questions();
@@ -75,6 +77,7 @@ public class JavaTest {
 				questions2.setUserAnswer(console.next());
 				if(questions2.getUserAnswer().equals(questions2.getAnswer()))
 				{
+					grade +=10;
 					questions2.setPoints(true);
 					System.out.println("You got it right! Congratulations.");
 				}
@@ -94,7 +97,7 @@ public class JavaTest {
 			
 		}
 		
-		//System.out.println(x);
+		System.out.println("\r\nYour grade is " + grade);
 		
 	}
 	
