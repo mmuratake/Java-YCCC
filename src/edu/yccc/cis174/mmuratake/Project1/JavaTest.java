@@ -75,10 +75,9 @@ public class JavaTest {
 				questions2.setUserAnswer(console.next());
 				if(questions2.getUserAnswer().equals(questions2.getAnswer()))
 				{
+					questions2.setPoints(true);
 					System.out.println("You got it right! Congratulations.");
 				}
-				System.out.println(questions2.getUserAnswer());
-				System.out.println(questions2.getAnswer());
 			}
 			else
 			{
@@ -94,6 +93,8 @@ public class JavaTest {
 			}
 			
 		}
+		
+		//System.out.println(x);
 		
 	}
 	
