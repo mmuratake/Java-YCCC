@@ -19,7 +19,7 @@ public class JavaTest {
 		Questions q1 = new Questions("What is Java?", "B", "A. A type of coffee", "B. A programming language", "C. A musical instrument");
 		Questions q2 = new Questions("How do you write a single-line comment in Java?", "//");
 		Questions q3 = new Questions("How do you write a multi-line comment in Java?", "/**");
-		Questions q4 = new Questions("What does \r\n do in a print statement?", "C", "A. Writes the letters r and n", 
+		Questions q4 = new Questions("What does \"slash-r-slash-n\" do in a print statement?", "C", "A. Writes the letters r and n", 
 				"B. Adds two spaces", "C. Prints to the next line");
 		Questions q5 = new Questions("Should you capitalize package names?", "B", "A. Yes", "B. No", "C. Occasionally");
 		Questions q6 = new Questions("Should you capitalize class names?", "A", "A. Yes", "B. No", "C. Occasionally");
@@ -49,10 +49,10 @@ public class JavaTest {
 		JavaTest jv = new JavaTest();
 		List<Questions> testQuestions = jv.loadQuestions();
 		
-		System.out.println("Hello! You are now taking a Java Test. Please answer as best you can. There are 10 questions.");
-		System.out.println("On multiple choice questions, please enter the letter of the option you think is correct.");
-		System.out.println("For questions with no choices, please write out the code directly.");
-		System.out.println("Good luck! \r\n ");
+		System.out.println("\r\nHello! You are now taking a Java Test. Please answer as best you can. There are 10 questions.");
+		System.out.println("\r\nRules: \r\n   On multiple choice questions, please enter the letter of the option you think is correct.");
+		System.out.println("   For questions with no choices, please write out the code directly.");
+		System.out.println("\r\nGood luck! \r\n ");
 		
 		for(Questions questions2 : testQuestions)
 		{
