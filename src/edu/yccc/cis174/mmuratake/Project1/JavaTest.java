@@ -73,13 +73,24 @@ public class JavaTest {
 			{
 				System.out.println(questions2);
 				questions2.setUserAnswer(console.next());
-				//if(questions2.getUserAnswer() = questions2.getAnswer())
-				
+				if(questions2.getUserAnswer().equals(questions2.getAnswer()))
+				{
+					System.out.println("You got it right! Congratulations.");
+				}
+				System.out.println(questions2.getUserAnswer());
+				System.out.println(questions2.getAnswer());
 			}
 			else
 			{
 				System.out.println("\r\n" + questions2.getQuestion());
 				q.userAnswer = console.next();
+				System.out.println(q.userAnswer);
+				// Below returns null; we'll get back to that.
+				System.out.println(q.getAnswer());
+				if(q.userAnswer == questions2.getAnswer())
+				{
+					System.out.println("You got it right! Congratulations.");
+				}
 			}
 			
 		}
