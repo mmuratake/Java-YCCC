@@ -13,6 +13,7 @@ package edu.yccc.cis174.mmuratake.Project1;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class JavaTest {
 	
@@ -47,6 +48,11 @@ public class JavaTest {
 		return questions;
 	}
 	
+	public static void check()
+	{
+		
+	}
+	
 	
 	public static void main(String[] args)
 	{
@@ -60,17 +66,22 @@ public class JavaTest {
 		
 		for(Questions questions2 : testQuestions)
 		{
+			Questions q = new Questions();
+			Scanner console = new Scanner(System.in);
+
 			if(questions2.getChoiceA() != null)
 			{
 				System.out.println(questions2);
+				q.userAnswer = console.next();
+				
 			}
 			else
 			{
 				System.out.println(questions2.getQuestion() + "\r\n");
+				q.userAnswer = console.next();
 			}
 			
 		}
-		
 		
 	}
 	
