@@ -15,7 +15,7 @@ public class Questions {
 	String choiceA;
 	String choiceB;
 	String choiceC;
-	
+
 	public Questions(String question, String answer, String choiceA, String choiceB, String choiceC)
 	{
 		this.question = question;
@@ -76,5 +76,20 @@ public class Questions {
 	{
 		return question + "\r\n" + choiceA + "\r\n" + choiceB + "\r\n" + choiceC + "\r\n";
 	}
+	
+	
+	
+	String userAnswer;
+	
+	public String getUserAnswer() 
+	{
+		return userAnswer;
+	}
+
+	public void setUserAnswer(String userAnswer) 
+	{
+		this.userAnswer = userAnswer;
+	}
+
 	
 }
