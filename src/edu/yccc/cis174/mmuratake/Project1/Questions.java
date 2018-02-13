@@ -15,7 +15,6 @@ public class Questions {
 	String choiceA;
 	String choiceB;
 	String choiceC;
-	Boolean points;
 	
 	public Questions(String question, String answer, String choiceA, String choiceB, String choiceC)
 	{
@@ -76,15 +75,6 @@ public class Questions {
 	public void setAnswer(String answer) 
 	{
 		this.answer = answer;
-	}
-	public Boolean getPoints() 
-	{
-		return points;
-	}
-
-	public void setPoints(Boolean points) 
-	{
-		this.points = points;
 	}
 
 	

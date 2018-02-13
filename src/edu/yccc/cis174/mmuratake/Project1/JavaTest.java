@@ -77,7 +77,6 @@ public class JavaTest {
 				if(questions2.getUserAnswer().toUpperCase().equals(questions2.getAnswer()))
 				{
 					grade +=10;
-					questions2.setPoints(true);
 					System.out.println("You got it right! Congratulations.");
 				}
 			}
@@ -88,7 +87,6 @@ public class JavaTest {
 				if(questions2.getUserAnswer().equals(questions2.getAnswer()))
 				{
 					grade +=10;
-					questions2.setPoints(true);
 					System.out.println("You got it right! Congratulations.");
 				}
 			}
