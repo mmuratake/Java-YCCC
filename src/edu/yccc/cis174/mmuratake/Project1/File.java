@@ -24,7 +24,6 @@ public class File {
             bufferedWriter.write("We are writing");
             bufferedWriter.write(" the text to the file.");
 
-            // Always close files.
             bufferedWriter.close();
         }
         catch(IOException ex) 
@@ -35,26 +34,19 @@ public class File {
 	
 	public static void readFile() 
 	{
-        // The name of the file to open.
         String fileName = "JavaTestQuestions.txt";
-
-        // This will reference one line at a time
         String line = null;
 
         try 
         {
-            // FileReader reads text files in the default encoding.
             FileReader fileReader = new FileReader(fileName);
-
-            // Always wrap FileReader in BufferedReader.
             BufferedReader bufferedReader = new BufferedReader(fileReader);
 
             while((line = bufferedReader.readLine()) != null) 
             {
-                System.out.println(line);
+            		System.out.println(line);
             }   
 
-            // Always close files.
             bufferedReader.close();
         }
         catch(FileNotFoundException ex) 
