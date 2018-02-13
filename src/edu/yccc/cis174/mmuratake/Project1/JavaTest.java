@@ -23,8 +23,8 @@ public class JavaTest {
 		Questions q1 = new Questions("What is Java?", "B", "A. A type of coffee", "B. A programming language", "C. A musical instrument");
 		Questions q2 = new Questions("How do you write a single-line comment in Java?", "//");
 		Questions q3 = new Questions("How do you write a multi-line comment in Java?", "/**");
-		Questions q4 = new Questions("What does \"slash-r-slash-n\" do in a print statement?", "C", "A. Writes the letters r and n", 
-				"B. Adds two spaces", "C. Prints to the next line");
+		Questions q4 = new Questions("What is it called when you combine two strings in a print statement using the plus sign?", "C",
+				"A. Addition", "B. Two-String", "C. Concatentaion");
 		Questions q5 = new Questions("Should you capitalize package names?", "B", "A. Yes", "B. No", "C. Occasionally");
 		Questions q6 = new Questions("Should you capitalize class names?", "A", "A. Yes", "B. No", "C. Occasionally");
 		Questions q7 = new Questions("What is the symbol for the logical operator \"and\" in Java?", "&&");
@@ -66,7 +66,7 @@ public class JavaTest {
 			}
 			else
 			{
-				System.out.println(questions2.getQuestion());
+				System.out.println(questions2.getQuestion() + "\r\n");
 			}
 			
 		}
