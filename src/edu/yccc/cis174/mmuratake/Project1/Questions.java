@@ -90,7 +90,7 @@ public class Questions {
 	
 	public String toString()
 	{
-		return question + "\r\n" + choiceA + "\r\n" + choiceB + "\r\n" + choiceC + "\r\n";
+		return "\r\n" + question + "\r\n" + choiceA + "\r\n" + choiceB + "\r\n" + choiceC;
 	}
 	
 	

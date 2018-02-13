@@ -72,12 +72,13 @@ public class JavaTest {
 			if(questions2.getChoiceA() != null)
 			{
 				System.out.println(questions2);
-				q.userAnswer = console.next();
+				questions2.setUserAnswer(console.next());
+				//if(questions2.getUserAnswer() = questions2.getAnswer())
 				
 			}
 			else
 			{
-				System.out.println(questions2.getQuestion() + "\r\n");
+				System.out.println("\r\n" + questions2.getQuestion());
 				q.userAnswer = console.next();
 			}
 			
