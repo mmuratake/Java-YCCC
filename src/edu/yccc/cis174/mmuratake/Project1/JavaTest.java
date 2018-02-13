@@ -68,14 +68,13 @@ public class JavaTest {
 		
 		for(Questions questions2 : testQuestions)
 		{
-			Questions q = new Questions();
 			Scanner console = new Scanner(System.in);
 
 			if(questions2.getChoiceA() != null)
 			{
 				System.out.println(questions2);
 				questions2.setUserAnswer(console.next());
-				if(questions2.getUserAnswer().equals(questions2.getAnswer()))
+				if(questions2.getUserAnswer().toUpperCase().equals(questions2.getAnswer()))
 				{
 					grade +=10;
 					questions2.setPoints(true);
@@ -85,19 +84,19 @@ public class JavaTest {
 			else
 			{
 				System.out.println("\r\n" + questions2.getQuestion());
-				q.userAnswer = console.next();
-				System.out.println(q.userAnswer);
-				// Below returns null; we'll get back to that.
-				System.out.println(q.getAnswer());
-				if(q.userAnswer == questions2.getAnswer())
+				questions2.setUserAnswer(console.next());
+				if(questions2.getUserAnswer().equals(questions2.getAnswer()))
 				{
+					grade +=10;
+					questions2.setPoints(true);
 					System.out.println("You got it right! Congratulations.");
 				}
 			}
 			
 		}
 		
-		System.out.println("\r\nYour grade is " + grade);
+		System.out.println("\r\nYou are now done with the test!");
+		System.out.println("Your grade is " + grade + "%.");
 		
 	}
 	
