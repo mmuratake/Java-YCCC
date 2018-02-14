@@ -13,13 +13,13 @@ import java.util.Scanner;
 public class File {
 	
 	public static void writeFile()
-			throws IOException 
-		{
-			BufferedWriter writer = new BufferedWriter(new FileWriter("JavaTextQuestions.txt"));
-			writer.write("Something");
-			writer.write("Wait just a minute");
-			writer.close();
-		}
+		throws IOException 
+	{
+		BufferedWriter writer = new BufferedWriter(new FileWriter("JavaTextQuestions.txt"));
+		writer.write("Something");
+		writer.write("Wait just a minute");
+		writer.close();
+	}
 	
 	public static void readFile() 
 	{
