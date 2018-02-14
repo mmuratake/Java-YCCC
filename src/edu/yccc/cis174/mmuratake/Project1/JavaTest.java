@@ -14,6 +14,8 @@ import java.util.Scanner;
 
 public class JavaTest {
 	
+	static Scanner console = new Scanner(System.in);
+	
 	public List<Questions> loadQuestions()
 	{
 		// Create a list of questions.
@@ -24,12 +26,12 @@ public class JavaTest {
 		Questions q2 = new Questions("How do you write a single-line comment in Java?", "//");
 		Questions q3 = new Questions("How do you write a multi-line comment in Java?", "/**");
 		Questions q4 = new Questions("What is it called when you combine two strings in a print statement using the plus sign?", "C",
-				"A. Addition", "B. Two-String", "C. Concatentaion");
+				"A. Addition", "B. Two-String", "C. Concatenation");
 		Questions q5 = new Questions("Should you capitalize package names?", "B", "A. Yes", "B. No", "C. Occasionally");
 		Questions q6 = new Questions("Should you capitalize class names?", "A", "A. Yes", "B. No", "C. Occasionally");
 		Questions q7 = new Questions("What is the symbol for the logical operator \"and\" in Java?", "&&");
 		Questions q8 = new Questions("What is the symbol for the logical operator \"or\" in Java?", "||");
-		Questions q9 = new Questions("Which one has more restrictions, Lists or Arrays?", "A", "A. Lists", "B. Arrays", "C. They're the same");
+		Questions q9 = new Questions("Which one has more restrictions, Lists or Arrays?", "B", "A. Lists", "B. Arrays", "C. They're the same");
 		Questions q10 = new Questions("How often is it recommended you save your work?", "B", "A. Every five seconds", 
 				"B. Early and often", "C. Only when you're done");
 		
@@ -66,7 +68,6 @@ public class JavaTest {
 		
 		for(Questions questions2 : testQuestions)
 		{
-			Scanner console = new Scanner(System.in);
 			
 			// If the question is multiple choice.
 			if(questions2.getChoiceA() != null)
