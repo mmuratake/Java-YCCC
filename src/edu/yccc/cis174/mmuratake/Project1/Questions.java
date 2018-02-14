@@ -10,12 +10,14 @@ package edu.yccc.cis174.mmuratake.Project1;
 
 public class Questions {
 	
+	// The different parts of a test question.
 	String question;
 	String answer;
 	String choiceA;
 	String choiceB;
 	String choiceC;
 	
+	// Constructor to make multiple choice question.
 	public Questions(String question, String answer, String choiceA, String choiceB, String choiceC)
 	{
 		this.question = question;
@@ -25,15 +27,11 @@ public class Questions {
 		this.choiceC = choiceC;
 	}
 	
+	// Constructor to make "short-answer" question.
 	public Questions(String question, String answer)
 	{
 		this.question = question;
 		this.answer = answer;
-	}
-	
-	public Questions()
-	{
-		
 	}
 
 	public String getChoiceA() 
@@ -78,13 +76,14 @@ public class Questions {
 	}
 
 	
+	// Redefining toString.
 	public String toString()
 	{
 		return "\r\n" + question + "\r\n" + choiceA + "\r\n" + choiceB + "\r\n" + choiceC;
 	}
 	
 	
-	
+	// Not part of the question, but used to determine whether user got the question right or not.
 	String userAnswer;
 	
 	public String getUserAnswer() 
