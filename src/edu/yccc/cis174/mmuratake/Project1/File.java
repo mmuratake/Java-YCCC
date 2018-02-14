@@ -6,7 +6,6 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -45,20 +44,7 @@ public class File {
             		
             	}
             }
-
-            while((bufferedReader.readLine()) != null) 
-            {
-            	
-            		
-            	for(Questions questions2 : testQuestions)
-            	{
-            		if(!fileName.contains(questions2.getQuestion()))
-            		{
-            			System.out.println();
-            		}
-            	}
-            }   
-
+            
             bufferedReader.close();
         }
         catch(FileNotFoundException ex) 
