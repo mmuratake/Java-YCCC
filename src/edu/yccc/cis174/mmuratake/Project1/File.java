@@ -46,6 +46,7 @@ public class File {
             }
             
             bufferedReader.close();
+            fileScanner.close();
         }
         catch(FileNotFoundException ex) 
         {
