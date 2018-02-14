@@ -1,14 +1,25 @@
 package edu.yccc.cis174.mmuratake.Project1;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class File {
+	
+	public static void writeFile()
+			throws IOException 
+		{
+			BufferedWriter writer = new BufferedWriter(new FileWriter("JavaTextQuestions.txt"));
+			writer.write("Something");
+			writer.write("Wait just a minute");
+			writer.close();
+		}
 	
 	public static void readFile() 
 	{
