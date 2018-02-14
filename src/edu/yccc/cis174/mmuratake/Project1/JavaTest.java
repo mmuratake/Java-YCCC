@@ -81,6 +81,10 @@ public class JavaTest {
 					grade +=10;
 					System.out.println("You got it right! Congratulations.");
 				}
+				else
+				{
+					System.out.println("That is incorrect!");
+				}
 			}
 			// If the question is not multiple choice.
 			else
@@ -92,6 +96,10 @@ public class JavaTest {
 				{
 					grade +=10;
 					System.out.println("You got it right! Congratulations.");
+				}
+				else
+				{
+					System.out.println("That is incorrect!");
 				}
 			}
 			
