@@ -68,7 +68,6 @@ public class JavaTest {
 		
 		for(Questions questions2 : testQuestions)
 		{
-			
 			// If the question is multiple choice.
 			if(questions2.getChoiceA() != null)
 			{
