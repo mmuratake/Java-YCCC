@@ -31,10 +31,13 @@ public class File {
             FileReader fileReader = new FileReader(fileName);
             BufferedReader bufferedReader = new BufferedReader(fileReader);
             
+            String line;
+            
             Scanner fileScanner = new Scanner(fileName);
             
-            while(fileScanner.hasNextLine())
+            while((line = bufferedReader.readLine()) != null)
             {
+            	
             	for(Questions questions2 : testQuestions)
             	{
             		if(!fileName.contains(questions2.getQuestion()))
