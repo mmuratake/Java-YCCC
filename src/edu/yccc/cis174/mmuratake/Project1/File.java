@@ -4,7 +4,9 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class File {
 	
@@ -13,19 +15,35 @@ public class File {
         String fileName = "JavaTestQuestions.txt";
         try 
         {
+        	JavaTest jv = new JavaTest();
+        	List<Questions> testQuestions = jv.loadQuestions();
+        	
             FileReader fileReader = new FileReader(fileName);
             BufferedReader bufferedReader = new BufferedReader(fileReader);
+            
+            Scanner fileScanner = new Scanner(fileName);
+            
+            while(fileScanner.hasNextLine())
+            {
+            	for(Questions questions2 : testQuestions)
+            	{
+            		if(!fileName.contains(questions2.getQuestion()))
+            		{
+            			testQuestions.remove(questions2);
+            		}
+            		
+            	}
+            }
 
             while((bufferedReader.readLine()) != null) 
             {
-            	JavaTest jv = new JavaTest();
-            	List<Questions> testQuestions = jv.loadQuestions();
+            	
             		
             	for(Questions questions2 : testQuestions)
             	{
             		if(!fileName.contains(questions2.getQuestion()))
             		{
-            			//?????????
+            			System.out.println();
             		}
             	}
             }   
