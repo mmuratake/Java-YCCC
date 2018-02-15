@@ -1,5 +1,6 @@
 package edu.yccc.cis174.mmuratake.Inheritance;
 
+// Press F4 when highlighting class (or any object) to see the hierarchy tree.
 
 public class App {
 	
