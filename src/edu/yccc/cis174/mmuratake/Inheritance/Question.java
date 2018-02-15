@@ -27,7 +27,7 @@ public class Question {
 
 	public String toString()
 	{
-		return "";
+		return this.question;
 	}
 
 }
