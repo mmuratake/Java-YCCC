@@ -17,8 +17,6 @@ import java.util.Scanner;
 public class JavaTest {
 	
 	static Scanner console = new Scanner(System.in);
-	static String name;
-
 	
 	public static List<Questions> loadQuestions()
 	{
@@ -73,13 +71,14 @@ public class JavaTest {
 	public static void main(String[] args)
 	{
 		JavaTest jv = new JavaTest();
+		Student s = new Student();
 		List<Questions> testQuestions = jv.loadQuestions();
 		
 		System.out.println("What is your name?");
-		name = console.next();
+		s.setName(console.next());
 		
 		//Tell the user what the test is like, just to make it easier for them.
-		System.out.println("\r\nHello, " + name + "! You are now taking a Java Test. Please answer as best you can. There are 10 questions.");
+		System.out.println("\r\nHello, " + s.getName() + "! You are now taking a Java Test. Please answer as best you can. There are 10 questions.");
 		System.out.println("\r\nRules: \r\n   On multiple choice questions, please enter the letter of the option you think is correct.");
 		System.out.println("   For questions with no choices, please write out the code directly.");
 		System.out.println("\r\nGood luck! \r\n ");
@@ -136,12 +135,12 @@ public class JavaTest {
 		System.out.println("\r\nYou are now done with the test!");
 		System.out.println("Your grade is " + grade + "%.");
 		
-		
+		s.setGrade(grade);
 						
 		WriteToFile wf = new WriteToFile();
 		try 
 		{
-			wf.writeExamResults(name, grade);
+			wf.writeExamResults(s.getName(), s.getGrade());
 		} 
 		catch (IOException e) 
 		{
