@@ -129,12 +129,6 @@ public class JavaTest {
 				}
 			}			
 		}
-				
-		int score = s.getGrade();
-				
-		// Let the user know the test is done, and print their grade to the console.
-		System.out.println("\r\nYou are now done with the test!");
-		System.out.println("Your grade is " + s.getGrade() + "%.");
 						
 		WriteToFile wf = new WriteToFile();
 		try 
@@ -146,13 +140,17 @@ public class JavaTest {
 					s.setGrade(s.getGrade() + 10); 
 				}
 			}
-			System.out.println(score + s.getGrade() + s.getName());
+			System.out.println(s.getGrade() + s.getName());
 			wf.writeExamResults(s.getName(), s.getGrade());
 		} 
 		catch (IOException e) 
 		{
 			e.printStackTrace();
 		}
+		
+		// Let the user know the test is done, and print their grade to the console.
+		System.out.println("\r\nYou are now done with the test!");
+		System.out.println("Your grade is " + s.getGrade() + "%.");
 		
 	}
 	
