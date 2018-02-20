@@ -26,15 +26,7 @@ public class File {
             
             while((line = bufferedReader.readLine()) != null)
             {
-            	
-            	for(Questions questions2 : testQuestions)
-            	{
-            		if(!fileName.contains(questions2.getQuestion()))
-            		{
-            			testQuestions.remove(questions2);
-            		}
             		
-            	}
             }
             
             bufferedReader.close();
