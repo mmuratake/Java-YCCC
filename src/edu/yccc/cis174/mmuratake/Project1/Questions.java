@@ -18,6 +18,8 @@ public class Questions {
 	String choiceC;
 	Boolean correct;
 
+	
+
 	// Constructor to make multiple choice question.
 	public Questions(String question, String answer, String choiceA, String choiceB, String choiceC)
 	{

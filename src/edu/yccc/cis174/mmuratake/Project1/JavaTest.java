@@ -18,8 +18,6 @@ public class JavaTest {
 	
 	static Scanner console = new Scanner(System.in);
 	static String name;
-	static //In order to calculate their grade at the end.
-	int grade = 0;
 
 	
 	public static List<Questions> loadQuestions()
@@ -88,6 +86,9 @@ public class JavaTest {
 		
 		System.out.println(loadQuestions().get(8));
 		
+		//In order to calculate their grade at the end.
+		int grade = 0;
+		
 		for(Questions questions2 : testQuestions)
 		{
 			// If the question is multiple choice.
@@ -97,7 +98,18 @@ public class JavaTest {
 				questions2.setUserAnswer(console.next());
 				
 				// If the letter they answered is the same as the letter specified to be the answer, they got it right.
-				JavaTest.calculateGrade2();
+				if(questions2.getUserAnswer().equalsIgnoreCase(questions2.getAnswer()))
+				{
+					// Add 10 points to their grade.
+					grade += 10;
+					questions2.setCorrect(true);
+					System.out.println("You got it right! Congratulations.");
+				}
+				else
+				{
+					questions2.setCorrect(false);
+					System.out.println("That is incorrect!");
+				}
 			
 			}
 			// If the question is not multiple choice.
@@ -105,16 +117,26 @@ public class JavaTest {
 			{
 				System.out.println("\r\n" + questions2.getQuestion());
 				questions2.setUserAnswer(console.next());
-				JavaTest.calculateGrade2();
-				
+				if(questions2.getUserAnswer().equals(questions2.getAnswer()))
+				{
+					// Add 10 points to their grade.
+					grade += 10;
+					questions2.setCorrect(true);
+					System.out.println("You got it right! Congratulations.");
+				}
+				else
+				{
+					questions2.setCorrect(false);
+					System.out.println("That is incorrect!");
+				}
 			}			
 		}
-		
-		
 				
 		// Let the user know the test is done, and print their grade to the console.
 		System.out.println("\r\nYou are now done with the test!");
 		System.out.println("Your grade is " + grade + "%.");
+		
+		
 						
 		WriteToFile wf = new WriteToFile();
 		try 
@@ -128,7 +150,7 @@ public class JavaTest {
 		
 	}
 	
-	public static int calculateGrade2()
+	//public static int calculateGrade2()
 	{
 		List<Questions> testQuestions = JavaTest.loadQuestions();
 		for(Questions questions2 : testQuestions) 
@@ -147,11 +169,11 @@ public class JavaTest {
 			
 			if(questions2.getCorrect() == true)
 			{
-				grade += 10;
+				//grade += 10;
 			}
 		}
 		
-		return grade;
+		//return grade;
 	}
 	
 }
