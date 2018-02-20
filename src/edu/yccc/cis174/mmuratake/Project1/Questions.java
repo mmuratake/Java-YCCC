@@ -16,7 +16,8 @@ public class Questions {
 	String choiceA;
 	String choiceB;
 	String choiceC;
-	
+	Boolean correct;
+
 	// Constructor to make multiple choice question.
 	public Questions(String question, String answer, String choiceA, String choiceB, String choiceC)
 	{
@@ -73,6 +74,14 @@ public class Questions {
 	public void setAnswer(String answer) 
 	{
 		this.answer = answer;
+	}
+	public Boolean getCorrect() 
+	{
+		return correct;
+	}
+	public void setCorrect(Boolean correct) 
+	{
+		this.correct = correct;
 	}
 
 	

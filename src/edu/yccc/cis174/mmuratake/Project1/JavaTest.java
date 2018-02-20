@@ -1,5 +1,7 @@
 package edu.yccc.cis174.mmuratake.Project1;
 
+import java.io.IOException;
+
 /**
  * Mami Muratake
  * February 14 2018
@@ -15,8 +17,12 @@ import java.util.Scanner;
 public class JavaTest {
 	
 	static Scanner console = new Scanner(System.in);
+	static String name;
+	static //In order to calculate their grade at the end.
+	int grade = 0;
+
 	
-	public List<Questions> loadQuestions()
+	public static List<Questions> loadQuestions()
 	{
 		// Create a list of questions.
 		List<Questions> questions = new ArrayList<Questions>();
@@ -50,21 +56,37 @@ public class JavaTest {
 		return questions;
 	}
 	
+	public int calculateGrade()
+	{
+		int grade = 0;
+		List<Questions> testQuestions = JavaTest.loadQuestions();
+		for(Questions questions2 : testQuestions) 
+		{
+			if(questions2.getCorrect() == true)
+			{
+				grade += 10;
+			}
+		}
+		
+		return grade;
+	}
+	
 	
 	public static void main(String[] args)
 	{
 		JavaTest jv = new JavaTest();
 		List<Questions> testQuestions = jv.loadQuestions();
 		
+		System.out.println("What is your name?");
+		name = console.next();
+		
 		//Tell the user what the test is like, just to make it easier for them.
-		System.out.println("\r\nHello! You are now taking a Java Test. Please answer as best you can. There are 10 questions.");
+		System.out.println("\r\nHello, " + name + "! You are now taking a Java Test. Please answer as best you can. There are 10 questions.");
 		System.out.println("\r\nRules: \r\n   On multiple choice questions, please enter the letter of the option you think is correct.");
 		System.out.println("   For questions with no choices, please write out the code directly.");
 		System.out.println("\r\nGood luck! \r\n ");
 		
-		
-		//In order to calculate their grade at the end.
-		int grade = 0;
+		System.out.println(loadQuestions().get(8));
 		
 		for(Questions questions2 : testQuestions)
 		{
@@ -75,40 +97,61 @@ public class JavaTest {
 				questions2.setUserAnswer(console.next());
 				
 				// If the letter they answered is the same as the letter specified to be the answer, they got it right.
-				if(questions2.getUserAnswer().toUpperCase().equals(questions2.getAnswer()))
-				{
-					// Add 10 points to their grade.
-					grade +=10;
-					System.out.println("You got it right! Congratulations.");
-				}
-				else
-				{
-					System.out.println("That is incorrect!");
-				}
+				JavaTest.calculateGrade2();
+			
 			}
 			// If the question is not multiple choice.
 			else
 			{
 				System.out.println("\r\n" + questions2.getQuestion());
 				questions2.setUserAnswer(console.next());
+				JavaTest.calculateGrade2();
 				
-				if(questions2.getUserAnswer().equals(questions2.getAnswer()))
-				{
-					grade +=10;
-					System.out.println("You got it right! Congratulations.");
-				}
-				else
-				{
-					System.out.println("That is incorrect!");
-				}
-			}
-			
+			}			
 		}
 		
+		
+				
 		// Let the user know the test is done, and print their grade to the console.
 		System.out.println("\r\nYou are now done with the test!");
 		System.out.println("Your grade is " + grade + "%.");
+						
+		WriteToFile wf = new WriteToFile();
+		try 
+		{
+			wf.writeExamResults(name, grade);
+		} 
+		catch (IOException e) 
+		{
+			e.printStackTrace();
+		}
 		
+	}
+	
+	public static int calculateGrade2()
+	{
+		List<Questions> testQuestions = JavaTest.loadQuestions();
+		for(Questions questions2 : testQuestions) 
+		{
+			if(questions2.getUserAnswer().equalsIgnoreCase(questions2.getAnswer()))
+			{
+				// Add 10 points to their grade.
+				questions2.setCorrect(true);
+				System.out.println("You got it right! Congratulations.");
+			}
+			else
+			{
+				questions2.setCorrect(false);
+				System.out.println("That is incorrect!");
+			}
+			
+			if(questions2.getCorrect() == true)
+			{
+				grade += 10;
+			}
+		}
+		
+		return grade;
 	}
 	
 }
