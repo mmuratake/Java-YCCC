@@ -19,6 +19,7 @@ public class JavaTest {
 	public static void main(String[] args)
 	{
 		Student s = new Student();
+		// Load the list of questions.
 		List<Questions> testQuestions = CreateQuestions.loadQuestions();
 		
 		// Ask the student for their name to write to file.
@@ -51,7 +52,6 @@ public class JavaTest {
 					questions2.setCorrect(false);
 					System.out.println("That is incorrect!");
 				}
-			
 			}
 			// If the question is not multiple choice.
 			else
@@ -76,6 +76,7 @@ public class JavaTest {
 		{
 			if(questions2.getCorrect().equals(true))
 			{
+				// This only calculates a grade out of 100 at the current moment.
 				s.setGrade(s.getGrade() + 10); 
 			}
 		}
