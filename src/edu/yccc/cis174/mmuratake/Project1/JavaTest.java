@@ -1,7 +1,5 @@
 package edu.yccc.cis174.mmuratake.Project1;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
 import java.io.IOException;
 
 /**
