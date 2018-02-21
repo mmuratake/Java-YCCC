@@ -36,6 +36,11 @@ public class Questions {
 		this.question = question;
 		this.answer = answer;
 	}
+	
+	public Questions()
+	{
+		this.question = question;
+	}
 
 	public String getChoiceA() 
 	{

@@ -17,8 +17,8 @@ public class CreateQuestions {
 		
 		try
 		{
-			fileScanner = new Scanner(new File("J:\\git\\Java-YCCC\\JavaTestQuestions"));
-			fileScanner2 = new Scanner(new File("J:\\git\\Java-YCCC\\JavaTestAnswers"));
+			fileScanner = new Scanner(new File("J:\\git\\Java-YCCC\\JavaTestQuestions.txt"));
+			fileScanner2 = new Scanner(new File("J:\\git\\Java-YCCC\\JavaTestAnswers.txt"));
 		
 			for(int x = 0; x <= 10; x++)  
 			{
