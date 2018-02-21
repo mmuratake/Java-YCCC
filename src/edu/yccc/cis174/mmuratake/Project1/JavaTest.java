@@ -1,5 +1,7 @@
 package edu.yccc.cis174.mmuratake.Project1;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
 
 /**
@@ -130,18 +132,24 @@ public class JavaTest {
 			}			
 		}
 						
-		WriteToFile wf = new WriteToFile();
+		//WriteToFile wf = new WriteToFile();
 		try 
 		{
 			for(Questions questions2 : testQuestions)
 			{
 				if(questions2.getCorrect().equals(true))
 				{
-					s.setGrade(s.getGrade() - 10); 
+					s.setGrade(s.getGrade() + 10); 
 				}
 			}
 			System.out.println(s.getGrade() + s.getName());
-			wf.writeExamResults(s.getName(), s.getGrade());
+			//int score = s.getGrade();
+			FileWriter fStream = new FileWriter("ExamResults.txt", true);
+			BufferedWriter writer = new BufferedWriter(fStream);
+			writer.write(s.getName() + "\r\n");
+			writer.write(s.getGrade() + "%");
+			writer.write("\r\n---------------------------------------------------------\r\n");
+			writer.close();
 		} 
 		catch (IOException e) 
 		{

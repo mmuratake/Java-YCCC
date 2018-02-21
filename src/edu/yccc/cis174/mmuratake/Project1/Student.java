@@ -3,7 +3,7 @@ package edu.yccc.cis174.mmuratake.Project1;
 public class Student {
 	
 	String name;
-	int grade = 100;
+	int grade = 0;
 	
 	public String getName() 
 	{
@@ -20,6 +20,11 @@ public class Student {
 	public void setGrade(int grade) 
 	{
 		this.grade = grade;
+	}
+	
+	public String toString()
+	{
+		return name + "/r/n" + grade;
 	}
 
 }
