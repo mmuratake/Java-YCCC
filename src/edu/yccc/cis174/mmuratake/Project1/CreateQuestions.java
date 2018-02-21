@@ -16,10 +16,10 @@ public class CreateQuestions {
 		Scanner fileScanner = new Scanner(fileName);
 		Scanner fileScanner2 = new Scanner(fileName2);
 		
-		while(fileScanner.hasNextLine() && fileScanner2.hasNextLine()) 
+		for(int x = 0; x <= 10; x++) 
 		{
 			String question = fileScanner.nextLine();
-			String answer = fileScanner.nextLine();
+			String answer = fileScanner2.nextLine();
 			Questions q = new Questions(question, answer);
 			questions.add(q);
 		}
