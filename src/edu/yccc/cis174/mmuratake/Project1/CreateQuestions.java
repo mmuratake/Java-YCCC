@@ -27,8 +27,16 @@ public class CreateQuestions {
 				String question = fileScanner.nextLine();
 				String answer = fileScanner2.nextLine();
 				String choices = fileScanner3.nextLine();
-				Questions q = new Questions(question, answer, choices);
-				questions.add(q);
+				if(choices.equals(null))
+				{
+					Questions q = new Questions(question, answer);
+					questions.add(q);
+				}
+				else
+				{
+					Questions q = new Questions(question, answer, choices);
+					questions.add(q);
+				}
 			}
 		}
 		catch(FileNotFoundException e) 
