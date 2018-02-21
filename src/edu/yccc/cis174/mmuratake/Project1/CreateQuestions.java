@@ -20,13 +20,13 @@ public class CreateQuestions {
 			fileScanner = new Scanner(new File("J:\\git\\Java-YCCC\\JavaTestQuestions"));
 			fileScanner2 = new Scanner(new File("J:\\git\\Java-YCCC\\JavaTestAnswers"));
 		
-		for(int x = 0; x <= 10; x++)  
-		{
-			//String question = fileScanner.nextLine();
-			//String answer = fileScanner2.nextLine();
-			Questions q = new Questions(fileScanner.nextLine(), fileScanner2.nextLine());
-			questions.add(q);
-		}
+			for(int x = 0; x <= 10; x++)  
+			{
+				String question = fileScanner.nextLine();
+				String answer = fileScanner2.nextLine();
+				Questions q = new Questions(question, answer);
+				questions.add(q);
+			}
 		}
 		catch(FileNotFoundException e) 
 		{
