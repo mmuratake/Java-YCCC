@@ -52,27 +52,11 @@ public class JavaTest {
 		return questions;
 	}
 	
-	public int calculateGrade()
-	{
-		int grade = 0;
-		List<Questions> testQuestions = JavaTest.loadQuestions();
-		for(Questions questions2 : testQuestions) 
-		{
-			if(questions2.getCorrect() == true)
-			{
-				grade += 10;
-			}
-		}
-		
-		return grade;
-	}
-	
 	
 	public static void main(String[] args)
 	{
-		JavaTest jv = new JavaTest();
 		Student s = new Student();
-		List<Questions> testQuestions = jv.loadQuestions();
+		List<Questions> testQuestions = JavaTest.loadQuestions();
 		
 		System.out.println("What is your name?");
 		s.setName(console.next());
