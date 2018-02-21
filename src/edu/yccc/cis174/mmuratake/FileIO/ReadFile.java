@@ -17,6 +17,8 @@ public class ReadFile {
 			{
 				System.out.println(inFile.next());
 			}
+			
+			inFile.close();
 		}
 		catch(FileNotFoundException e)
 		{
