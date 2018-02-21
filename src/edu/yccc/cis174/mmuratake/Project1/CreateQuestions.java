@@ -20,7 +20,7 @@ public class CreateQuestions {
 			fileScanner = new Scanner(new File("J:\\git\\Java-YCCC\\JavaTestQuestions.txt"));
 			fileScanner2 = new Scanner(new File("J:\\git\\Java-YCCC\\JavaTestAnswers.txt"));
 		
-			while (fileScanner.hasNextLine() && fileScanner2.hasNextLine())   
+			while(fileScanner.hasNextLine() && fileScanner2.hasNextLine())   
 			{
 				String question = fileScanner.nextLine();
 				String answer = fileScanner2.nextLine();
