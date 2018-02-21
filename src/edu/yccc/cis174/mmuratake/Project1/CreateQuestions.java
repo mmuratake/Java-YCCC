@@ -14,17 +14,20 @@ public class CreateQuestions {
 		
 		Scanner fileScanner = null;
 		Scanner fileScanner2 = null;
+		Scanner fileScanner3 = null;
 		
 		try
 		{
 			fileScanner = new Scanner(new File("J:\\git\\Java-YCCC\\JavaTestQuestions.txt"));
 			fileScanner2 = new Scanner(new File("J:\\git\\Java-YCCC\\JavaTestAnswers.txt"));
+			fileScanner3 = new Scanner(new File("J:\\git\\Java-YCCC\\JavaTestChoices.txt"));
 		
 			while(fileScanner.hasNextLine() && fileScanner2.hasNextLine())   
 			{
 				String question = fileScanner.nextLine();
 				String answer = fileScanner2.nextLine();
-				Questions q = new Questions(question, answer);
+				String choices = fileScanner3.nextLine();
+				Questions q = new Questions(question, answer, choices);
 				questions.add(q);
 			}
 		}

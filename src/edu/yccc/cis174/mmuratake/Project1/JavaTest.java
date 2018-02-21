@@ -36,7 +36,7 @@ public class JavaTest {
 		for(Questions questions2 : testQuestions)
 		{
 			// If the question is multiple choice.
-			if(questions2.getChoiceA() != null)
+			if(questions2.getChoices() != null)
 			{
 				System.out.println(questions2);
 				questions2.setUserAnswer(console.next());

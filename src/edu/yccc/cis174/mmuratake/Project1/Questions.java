@@ -13,21 +13,17 @@ public class Questions {
 	// The different parts of a test question.
 	String question;
 	String answer;
-	String choiceA;
-	String choiceB;
-	String choiceC;
+	String choices;
 	Boolean correct;
 
 	
 
 	// Constructor to make multiple choice question.
-	public Questions(String question, String answer, String choiceA, String choiceB, String choiceC)
+	public Questions(String question, String answer, String choices)
 	{
 		this.question = question;
 		this.answer = answer;
-		this.choiceA = choiceA;
-		this.choiceB = choiceB;
-		this.choiceC = choiceC;
+		this.choices = choices;
 	}
 	
 	// Constructor to make "short-answer" question.
@@ -38,29 +34,13 @@ public class Questions {
 	}
 	
 
-	public String getChoiceA() 
+	public String getChoices() 
 	{
-		return choiceA;
+		return choices;
 	}
-	public void setChoiceA(String choiceA) 
+	public void setChoices(String choices) 
 	{
-		this.choiceA = choiceA;
-	}
-	public String getChoiceB() 
-	{
-		return choiceB;
-	}
-	public void setChoiceB(String choiceB) 
-	{
-		this.choiceB = choiceB;
-	}
-	public String getChoiceC() 
-	{
-		return choiceC;
-	}
-	public void setChoiceC(String choiceC) 
-	{
-		this.choiceC = choiceC;
+		this.choices = choices;
 	}
 	public String getQuestion() 
 	{
@@ -91,7 +71,7 @@ public class Questions {
 	// Redefining toString.
 	public String toString()
 	{
-		return "\r\n" + question + "\r\n" + choiceA + "\r\n" + choiceB + "\r\n" + choiceC;
+		return "\r\n" + question + "\r\n" + choices;
 	}
 	
 	
