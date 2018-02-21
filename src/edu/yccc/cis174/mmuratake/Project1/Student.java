@@ -21,10 +21,5 @@ public class Student {
 	{
 		this.grade = grade;
 	}
-	
-	public String toString()
-	{
-		return name + "/r/n" + grade;
-	}
 
 }
