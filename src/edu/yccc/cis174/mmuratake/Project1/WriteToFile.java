@@ -11,7 +11,7 @@ public class WriteToFile {
 		FileWriter fStream = new FileWriter("ExamResults.txt", true);
 		BufferedWriter writer = new BufferedWriter(fStream);
 		writer.write(studentName + "\r\n");
-		writer.write(score);
+		writer.write(score + "%");
 		writer.write("\r\n---------------------------------------------------------\r\n");
 		writer.close();
 	}

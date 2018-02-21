@@ -132,7 +132,7 @@ public class JavaTest {
 			}			
 		}
 						
-		//WriteToFile wf = new WriteToFile();
+		WriteToFile wf = new WriteToFile();
 		try 
 		{
 			for(Questions questions2 : testQuestions)
@@ -143,13 +143,7 @@ public class JavaTest {
 				}
 			}
 			System.out.println(s.getGrade() + s.getName());
-			//int score = s.getGrade();
-			FileWriter fStream = new FileWriter("ExamResults.txt", true);
-			BufferedWriter writer = new BufferedWriter(fStream);
-			writer.write(s.getName() + "\r\n");
-			writer.write(s.getGrade() + "%");
-			writer.write("\r\n---------------------------------------------------------\r\n");
-			writer.close();
+			wf.writeExamResults(s.getName(), s.getGrade());
 		} 
 		catch (IOException e) 
 		{
