@@ -140,7 +140,6 @@ public class JavaTest {
 					s.setGrade(s.getGrade() + 10); 
 				}
 			}
-			System.out.println(s.getGrade() + s.getName());
 			wf.writeExamResults(s.getName(), s.getGrade());
 		} 
 		catch (IOException e) 
