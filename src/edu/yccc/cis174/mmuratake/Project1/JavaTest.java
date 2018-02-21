@@ -58,6 +58,7 @@ public class JavaTest {
 		Student s = new Student();
 		List<Questions> testQuestions = JavaTest.loadQuestions();
 		
+		// Ask the student for their name to write to file.
 		System.out.println("What is your name?");
 		s.setName(console.next());
 		
@@ -68,9 +69,7 @@ public class JavaTest {
 		System.out.println("\r\nGood luck! \r\n ");
 		
 		System.out.println(loadQuestions().get(8));
-		
-		//In order to calculate their grade at the end.
-		
+				
 		for(Questions questions2 : testQuestions)
 		{
 			// If the question is multiple choice.
@@ -82,8 +81,6 @@ public class JavaTest {
 				// If the letter they answered is the same as the letter specified to be the answer, they got it right.
 				if(questions2.getUserAnswer().equalsIgnoreCase(questions2.getAnswer()))
 				{
-					// Add 10 points to their grade.
-					//grade += 10;
 					questions2.setCorrect(true);
 					System.out.println("You got it right! Congratulations.");
 				}
@@ -101,8 +98,6 @@ public class JavaTest {
 				questions2.setUserAnswer(console.next());
 				if(questions2.getUserAnswer().equals(questions2.getAnswer()))
 				{
-					// Add 10 points to their grade.
-					//grade += 10;
 					questions2.setCorrect(true);
 					System.out.println("You got it right! Congratulations.");
 				}
@@ -113,17 +108,20 @@ public class JavaTest {
 				}
 			}			
 		}
-						
-		WriteToFile wf = new WriteToFile();
+			
+		// Calculates the grade.
+		for(Questions questions2 : testQuestions)
+		{
+			if(questions2.getCorrect().equals(true))
+			{
+				s.setGrade(s.getGrade() + 10); 
+			}
+		}
+		
+		// Write the grade and the student's name to a file.
 		try 
 		{
-			for(Questions questions2 : testQuestions)
-			{
-				if(questions2.getCorrect().equals(true))
-				{
-					s.setGrade(s.getGrade() + 10); 
-				}
-			}
+			WriteToFile wf = new WriteToFile();
 			wf.writeExamResults(s.getName(), s.getGrade());
 		} 
 		catch (IOException e) 
