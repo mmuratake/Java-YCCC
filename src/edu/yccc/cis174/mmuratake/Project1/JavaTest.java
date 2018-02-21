@@ -31,7 +31,6 @@ public class JavaTest {
 		System.out.println("   For questions with no choices, please write out the code directly.");
 		System.out.println("\r\nGood luck! \r\n ");
 		
-		//System.out.println(CreateQuestions.loadQuestions().get(8));
 				
 		for(Questions questions2 : testQuestions)
 		{

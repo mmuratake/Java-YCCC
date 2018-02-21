@@ -47,6 +47,7 @@ public class CreateQuestions {
 		{
 			fileScanner.close();
 			fileScanner2.close();
+			fileScanner3.close();
 		}
 		
 		return questions;
