@@ -137,7 +137,7 @@ public class JavaTest {
 			{
 				if(questions2.getCorrect().equals(true))
 				{
-					s.setGrade(s.getGrade() + 10); 
+					s.setGrade(s.getGrade() - 10); 
 				}
 			}
 			System.out.println(s.getGrade() + s.getName());

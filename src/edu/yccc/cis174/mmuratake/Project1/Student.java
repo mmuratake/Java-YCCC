@@ -3,7 +3,7 @@ package edu.yccc.cis174.mmuratake.Project1;
 public class Student {
 	
 	String name;
-	int grade = 0;
+	int grade = 100;
 	
 	public String getName() 
 	{
