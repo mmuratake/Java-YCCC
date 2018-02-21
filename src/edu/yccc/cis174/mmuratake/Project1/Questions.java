@@ -37,10 +37,6 @@ public class Questions {
 		this.answer = answer;
 	}
 	
-	public Questions()
-	{
-		this.question = question;
-	}
 
 	public String getChoiceA() 
 	{
