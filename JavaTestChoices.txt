@@ -1,10 +1,10 @@
-A. A type of coffee /r/nB. A programming language /r/nC. A musical instrument
+A. A type of coffee  B. A programming language  C. A musical instrument
 Short answer
 Short answer
-A. Addition /r/nB. Two-String /r/nC. Concatenation
-A. Yes", "B. No", "C. Occasionally
-A. Yes", "B. No", "C. Occasionally
+A. Addition   B. Two-String   C. Concatenation
+A. Yes   B. No   C. Occasionally
+A. Yes   B. No   C. Occasionally
 Short answer
 Short answer
-A. Lists /r/nB. Arrays /r/nC. They're the same
-A. Every five seconds /r/nB. Early and often /r/nC. Only when you're done
+A. Lists   B. Arrays   C. They're the same
+A. Every five seconds   B. Early and often   C. Only when you're done

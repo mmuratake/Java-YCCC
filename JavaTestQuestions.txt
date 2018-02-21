@@ -4,7 +4,7 @@
 4. What is it called when you combine two strings in a print statement using the plus sign?
 5. Should you capitalize package names?
 6. Should you capitalize class names?
-7. What is the symbol for the logical operator \"and\" in Java?
-8. What is the symbol for the logical operator \"or\" in Java?
+7. What is the symbol for the logical operator "and" in Java?
+8. What is the symbol for the logical operator "or" in Java?
 9. Which one has more restrictions, Lists or Arrays?
 10. How often is it recommended you save your work?
