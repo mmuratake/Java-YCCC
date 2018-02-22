@@ -16,6 +16,9 @@ public class JavaTest {
 	
 	static Scanner console = new Scanner(System.in);
 	
+	static double total = 0;
+	static double correct = 0;
+	
 	public static void main(String[] args)
 	{
 		Student s = new Student();
@@ -68,7 +71,8 @@ public class JavaTest {
 					questions2.setCorrect(false);
 					System.out.println("That is incorrect!");
 				}
-			}			
+			}
+			total += 1;
 		}
 			
 		// Calculates the grade.
@@ -76,10 +80,15 @@ public class JavaTest {
 		{
 			if(questions2.getCorrect().equals(true))
 			{
+				correct +=1;
 				// This only calculates a grade out of 100 at the current moment.
 				s.setGrade(s.getGrade() + 10); 
 			}
 		}
+		
+		double score = correct / total * 100;
+		System.out.println(correct);
+		System.out.println(total);
 		
 		// Write the grade and the student's name to a file.
 		try 
@@ -95,6 +104,7 @@ public class JavaTest {
 		// Let the user know the test is done, and print their grade to the console.
 		System.out.println("\r\nYou are now done with the test!");
 		System.out.println("Your grade is " + s.getGrade() + "%.");
+		System.out.println("Your grade is " + score + "%.");
 		
 	}
 	
