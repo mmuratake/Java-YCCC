@@ -66,12 +66,44 @@ public class App {
 	
 	public void askJava()
 	{
-		List<Question> questions = j.loadQuestion();
+		List<Question> testQuestions = j.loadQuestion();
+		for(Question questions : testQuestions)
+		{
+			System.out.println(questions.getQuestion());
+			questions.setUserAnswer(console.next());
+			if(questions.getUserAnswer().equals(questions.getAnswer()))
+			{
+				questions.setIsCorrect(true);
+				System.out.println("That's correct!");
+			}
+			else
+			{
+				questions.setIsCorrect(false);
+				System.out.println("That is incorrect.");
+			}
+			
+		}
 	}
 	
 	public void askEnglish()
 	{
-		
+		List<Question> testQuestions = e.loadQuestion();
+		for(Question questions : testQuestions)
+		{
+			System.out.println(questions.getQuestion());
+			questions.setUserAnswer(console.next());
+			if(questions.getUserAnswer().equals(questions.getAnswer()))
+			{
+				questions.setIsCorrect(true);
+				System.out.println("That's correct!");
+			}
+			else
+			{
+				questions.setIsCorrect(false);
+				System.out.println("That is incorrect.");
+			}
+			
+		}
 	}
 	
 	// 4. Calculate score.
