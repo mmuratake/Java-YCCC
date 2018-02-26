@@ -14,7 +14,7 @@ public class Questions {
 	String question;
 	String answer;
 	String choices;
-	Boolean correct;
+	Boolean correct = false;
 	
 
 	// Constructor to make multiple choice question.
