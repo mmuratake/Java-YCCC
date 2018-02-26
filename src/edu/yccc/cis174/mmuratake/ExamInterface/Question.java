@@ -4,6 +4,8 @@ public class Question {
 	
 	String question;
 	String answer;
+	String userAnswer;
+	String studentName;
 
 	public String getAnswer() 
 	{
