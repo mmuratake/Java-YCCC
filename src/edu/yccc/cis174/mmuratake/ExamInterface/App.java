@@ -32,7 +32,6 @@ public class App {
 		System.out.println("Hello! What is your name?");
 		name = console.next();
 		a.examChoices();
-		a.score();
 		System.out.println("You are now done with the test!");
 		System.out.println(name + ", your score is " + score + "%.");
 		try 
@@ -106,6 +105,7 @@ public class App {
 			
 			total += 1.0;
 		}
+		j.calculateScore();
 	}
 	
 	public void askEnglish()
@@ -127,15 +127,12 @@ public class App {
 			
 			total += 1.0;
 		}
+		e.calculateScore();
 	}
 	
 	// 4. Calculate score.
 	
-	public double score()
-	{
-		score = (correct / total) * 100;
-		return score;
-	}
+	
 	
 	public void writeExamResults(String studentName, double score) throws IOException
 	{

@@ -12,7 +12,7 @@ public class EnglishExam implements Exam{
 	}
 
 
-	public float calculateScore() 
+	public double calculateScore() 
 	{
 		// TODO Auto-generated method stub
 		return 0;

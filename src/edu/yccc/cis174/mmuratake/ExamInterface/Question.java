@@ -5,6 +5,21 @@ public class Question {
 	String question;
 	String answer;
 	String userAnswer;
+	String choices;
+
+
+	public Question(String question, String answer) 
+	{
+		this.question = question;
+		this.answer = answer;
+	}
+
+	public Question(String question, String answer, String choices) 
+	{
+		this.question = question;
+		this.answer = answer;
+		this.choices = choices;
+	}
 
 	public String getAnswer() 
 	{
@@ -36,6 +51,14 @@ public class Question {
 		this.userAnswer = userAnswer;
 	}
 	
-	
+	public String getChoices() 
+	{
+		return choices;
+	}
+
+	public void setChoices(String choices) 
+	{
+		this.choices = choices;
+	}
 
 }

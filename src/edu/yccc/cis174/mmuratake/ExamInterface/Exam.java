@@ -6,6 +6,6 @@ public interface Exam {
 	
 	public List<Question> loadQuestion();
 	
-	public float calculateScore();
+	public double calculateScore();
 
 }
