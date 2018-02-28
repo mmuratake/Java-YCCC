@@ -26,6 +26,7 @@ public class App {
 	static double correct = 0.0;
 	static double score = 0.0;
 	static String name;
+	String chooseTest;
 	
 	public static void main(String[] args)
 	{
@@ -63,14 +64,13 @@ public class App {
 	{
 		System.out.println("Which exam do you want to take?");
 		System.out.println("A. Java Exam       B. English Exam");
-		String choice;
-		choice = console.next();
-		if(choice.equalsIgnoreCase("A"))
+		chooseTest = console.next();
+		if(chooseTest.equalsIgnoreCase("A"))
 		{
 			a.loadJavaExam();
 			a.askJava();
 		}
-		else if(choice.equalsIgnoreCase("B"))
+		else if(chooseTest.equalsIgnoreCase("B"))
 		{
 			a.loadEnglishExam();
 			a.askEnglish();
@@ -136,8 +136,16 @@ public class App {
 	
 	public void writeExamResults(String studentName, double score) throws IOException
 	{
-		FileWriter fStream = new FileWriter("ExamResults(Java).txt", true);
+		FileWriter fStream = new FileWriter("InterfaceExamResults.txt", true);
 		BufferedWriter writer = new BufferedWriter(fStream);
+		if(chooseTest.equalsIgnoreCase("A"))
+		{
+			writer.write("Java Exam /r/n");
+		}
+		else if(chooseTest.equalsIgnoreCase("B"))
+		{
+			writer.write("English Exam /r/n");
+		}
 		writer.write(studentName + " got a score of " + score + "%");
 		writer.write("\r\n---------------------------------------------------------\r\n");
 		writer.close();

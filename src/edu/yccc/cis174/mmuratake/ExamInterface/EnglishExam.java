@@ -14,8 +14,8 @@ public class EnglishExam implements Exam{
 
 	public double calculateScore() 
 	{
-		// TODO Auto-generated method stub
-		return 0;
+		App.score = (App.correct / App.total) * 100;
+		return App.score;
 	}
 	
 	
