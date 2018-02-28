@@ -3,7 +3,7 @@ package edu.yccc.cis174.mmuratake.Project1;
 public class Student {
 	
 	String name;
-	int grade = 0;
+	double grade = 0;
 	
 	public String getName() 
 	{
@@ -13,13 +13,13 @@ public class Student {
 	{
 		this.name = name;
 	}
-	public int getGrade() 
+	public double getGrade() 
 	{
 		return grade;
 	}
-	public void setGrade(int grade) 
+	public void setGrade(double d) 
 	{
-		this.grade = grade;
+		this.grade = d;
 	}
 
 }

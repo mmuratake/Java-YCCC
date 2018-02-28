@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class WriteToFile {
 	
-	public void writeExamResults(String studentName, int score) throws IOException
+	public void writeExamResults(String studentName, double score) throws IOException
 	{
 		FileWriter fStream = new FileWriter("ExamResults.txt", true);
 		BufferedWriter writer = new BufferedWriter(fStream);

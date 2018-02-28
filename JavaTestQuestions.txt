@@ -8,4 +8,3 @@
 8. What is the symbol for the logical operator "or" in Java?
 9. Which one has more restrictions, Lists or Arrays?
 10. How often is it recommended you save your work?
-11. Does this test allow for more than 10 questions?
