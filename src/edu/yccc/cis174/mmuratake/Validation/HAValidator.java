@@ -26,4 +26,10 @@ public class HAValidator implements Validator{
 		return 0;
 	}
 
+	public void setApp(String app) 
+	{
+		// TODO Auto-generated method stub
+		
+	}
+
 }
