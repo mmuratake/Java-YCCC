@@ -9,8 +9,6 @@ import java.util.Scanner;
 
 public class JavaExam implements Exam {
 	
-	JavaExam j = new JavaExam();
-	
 	static Scanner console = new Scanner(System.in);
 	
 	static double total = 0.0;
@@ -72,6 +70,7 @@ public class JavaExam implements Exam {
 	
 	public void giveExam()
 	{
+		JavaExam j = new JavaExam();
 		List<Question> testQuestions = j.loadQuestion();
 		for(Question questions : testQuestions)
 		{

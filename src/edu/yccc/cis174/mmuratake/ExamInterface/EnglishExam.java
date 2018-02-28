@@ -5,8 +5,6 @@ import java.util.Scanner;
 
 public class EnglishExam implements Exam{
 	
-	EnglishExam e = new EnglishExam();
-	
 	static Scanner console = new Scanner(System.in);
 	
 	static double total = 0.0;
@@ -23,6 +21,7 @@ public class EnglishExam implements Exam{
 	
 	public void giveExam()
 	{
+		EnglishExam e = new EnglishExam();
 		List<Question> testQuestions = e.loadQuestion();
 		for(Question questions : testQuestions)
 		{
