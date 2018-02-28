@@ -3,7 +3,7 @@ package edu.yccc.cis174.mmuratake.Validation;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ValidationController {
+public class TestValidation {
 	
 	List<Validator> validators = new ArrayList<Validator>();
 	
@@ -42,7 +42,7 @@ public class ValidationController {
 	
 	public static void main(String[] args)
 	{
-		ValidationController vc = new ValidationController();
+		TestValidation vc = new TestValidation();
 		vc.loadValidators();
 		vc.runValidation();
 	}
