@@ -3,6 +3,8 @@ package edu.yccc.cis174.mmuratake.Validation;
 import java.util.ArrayList;
 import java.util.List;
 
+// You can rename classes!! Right click the class, then check under refactor.
+
 public class TestValidation {
 	
 	List<Validator> validators = new ArrayList<Validator>();
@@ -36,8 +38,6 @@ public class TestValidation {
 				System.out.println("Severity: " + v.getSeverity());
 			}
 		}
-		
-		
 	}
 	
 	public static void main(String[] args)
