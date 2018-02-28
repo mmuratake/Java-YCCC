@@ -33,7 +33,7 @@ public class App {
 		System.out.println("Hello! What is your name?");
 		name = console.next();
 		a.examChoices();
-		System.out.println("You are now done with the test!");
+		System.out.println("\r\nYou are now done with the test!");
 		System.out.println(name + ", your score is " + score + "%.");
 		try 
 		{
@@ -48,15 +48,7 @@ public class App {
 	
 	// 1. Load my exams.
 	
-	public void loadJavaExam()
-	{
-		j.loadQuestion();
-	}
-	
-	public void loadEnglishExam()
-	{
-		e.loadQuestion();
-	}
+
 	
 	// 2. Offer the available exam choices.
 	
@@ -67,13 +59,13 @@ public class App {
 		chooseTest = console.next();
 		if(chooseTest.equalsIgnoreCase("A"))
 		{
-			a.loadJavaExam();
-			a.askJava();
+			j.loadQuestion();
+			j.giveExam();
 		}
 		else if(chooseTest.equalsIgnoreCase("B"))
 		{
-			a.loadEnglishExam();
-			a.askEnglish();
+			e.loadQuestion();
+			e.giveExam();
 		}
 		else
 		{
@@ -86,27 +78,7 @@ public class App {
 	//		a. Ask questions.
 	//		b. Collect responses.
 	
-	public void askJava()
-	{
-		List<Question> testQuestions = j.loadQuestion();
-		for(Question questions : testQuestions)
-		{
-			System.out.println(questions.getQuestion());
-			questions.setUserAnswer(console.next());
-			if(questions.getUserAnswer().equals(questions.getAnswer()))
-			{
-				System.out.println("That's correct!");
-				correct += 1.0;
-			}
-			else
-			{
-				System.out.println("That is incorrect.");
-			}
-			
-			total += 1.0;
-		}
-		j.calculateScore();
-	}
+	
 	
 	public void askEnglish()
 	{
@@ -133,18 +105,17 @@ public class App {
 	// 4. Calculate score.
 	
 	
-	
 	public void writeExamResults(String studentName, double score) throws IOException
 	{
 		FileWriter fStream = new FileWriter("InterfaceExamResults.txt", true);
 		BufferedWriter writer = new BufferedWriter(fStream);
 		if(chooseTest.equalsIgnoreCase("A"))
 		{
-			writer.write("Java Exam /r/n");
+			writer.write("Java Exam \r\n");
 		}
 		else if(chooseTest.equalsIgnoreCase("B"))
 		{
-			writer.write("English Exam /r/n");
+			writer.write("English Exam \r\n");
 		}
 		writer.write(studentName + " got a score of " + score + "%");
 		writer.write("\r\n---------------------------------------------------------\r\n");

@@ -60,5 +60,11 @@ public class Question {
 	{
 		this.choices = choices;
 	}
+	
+	// Redefining toString.
+	public String toString()
+	{
+		return "\r\n" + question + "\r\n" + choices;
+	}
 
 }

@@ -9,6 +9,14 @@ import java.util.Scanner;
 
 public class JavaExam implements Exam {
 	
+	JavaExam j = new JavaExam();
+	
+	static Scanner console = new Scanner(System.in);
+	
+	static double total = 0.0;
+	static double correct = 0.0;
+	static double score = 0.0;
+	
 	public List<Question> loadQuestion() 
 	{
 		// Create a list of questions.
@@ -61,11 +69,56 @@ public class JavaExam implements Exam {
 				
 		return question;
 	}
+	
+	public void giveExam()
+	{
+		List<Question> testQuestions = j.loadQuestion();
+		for(Question questions : testQuestions)
+		{
+			// If the question is multiple choice.
+			if (questions.getChoices() != null) 
+			{
+				System.out.println(questions);
+				questions.setUserAnswer(console.next());
 
+				// If the letter they answered is the same as the letter specified to be the answer, they got it right.
+				if (questions.getUserAnswer().equalsIgnoreCase(questions.getAnswer())) 
+				{
+					correct += 1.0;
+					System.out.println("That's correct!");
+				} 
+				else 
+				{
+					System.out.println("That is incorrect.");
+				}
+			}
+			// If the question is not multiple choice.
+			else 
+			{
+				System.out.println("\r\n" + questions.getQuestion());
+				questions.setUserAnswer(console.next());
+				if (questions.getUserAnswer().equals(questions.getAnswer())) 
+				{
+					correct += 1.0;
+					System.out.println("That's correct!");
+				}
+				else 
+				{
+					System.out.println("That is incorrect.");
+				}
+			}
+			
+			total += 1.0;
+		}
+		
+		j.calculateScore();
+	}
+
+	// Calculate the score.
 	public double calculateScore() 
 	{
-		App.score = (App.correct / App.total) * 100;
-		return App.score;
+		score = (correct / total) * 100;
+		return score;
 	}
 
 }
