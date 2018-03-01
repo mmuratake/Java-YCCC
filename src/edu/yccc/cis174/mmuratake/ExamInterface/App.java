@@ -35,7 +35,7 @@ public class App {
 		System.out.println("Hello! What is your name?");
 		name = console.next();
 		a.examChoices();
-		a.receiveScore();
+		//a.receiveScore();
 		System.out.println("\r\nYou are now done with the test!");
 		System.out.println(name + ", your score is " + score2 + "%.");
 	}

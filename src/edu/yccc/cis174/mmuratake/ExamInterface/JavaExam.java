@@ -120,6 +120,7 @@ public class JavaExam implements Exam {
 	public double calculateScore() 
 	{
 		score = (correct / total) * 100;
+		App.score2 = score;
 		return score;
 	}
 	
