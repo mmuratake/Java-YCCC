@@ -1,7 +1,10 @@
 package edu.yccc.cis174.mmuratake.ExamInterface;
 
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -118,6 +121,16 @@ public class JavaExam implements Exam {
 	{
 		score = (correct / total) * 100;
 		return score;
+	}
+	
+	// Write the user's name, the test taken, and the score.
+	public void writeExamResults(String studentName, double score) throws IOException
+	{
+		FileWriter fStream = new FileWriter("InterfaceExamResults.txt", true);
+		BufferedWriter writer = new BufferedWriter(fStream);
+		writer.write(studentName + " got a score of " + score + "%");
+		writer.write("\r\n---------------------------------------------------------\r\n");
+		writer.close();
 	}
 
 }

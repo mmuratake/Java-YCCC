@@ -14,3 +14,9 @@ Asaya got a score of 0.0%
 Java Exam 
 Shouta got a score of 20.0%
 ---------------------------------------------------------
+English Exam 
+Terasaka got a score of 80.0%
+---------------------------------------------------------
+English Exam 
+Mitsubishi got a score of 100.0%
+---------------------------------------------------------

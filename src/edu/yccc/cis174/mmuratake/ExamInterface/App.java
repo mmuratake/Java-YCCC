@@ -53,13 +53,14 @@ public class App {
 	
 
 	
-	// 2. Offer the available exam choices.
+	// Offer the available exam choices.
 	
 	public void examChoices()
 	{
 		System.out.println("\r\nWhich exam do you want to take?");
 		System.out.println("A. Java Exam       B. English Exam");
 		chooseTest = console.next();
+		// Load the exam they choose.
 		if(chooseTest.equalsIgnoreCase("A"))
 		{
 			j.loadQuestion();
@@ -83,29 +84,7 @@ public class App {
 	
 	
 	
-	public void askEnglish()
-	{
-		List<Question> testQuestions = e.loadQuestion();
-		for(Question questions : testQuestions)
-		{
-			System.out.println(questions.getQuestion());
-			questions.setUserAnswer(console.next());
-			if(questions.getUserAnswer().equals(questions.getAnswer()))
-			{
-				System.out.println("That's correct!");
-				//correct += 1.0;
-			}
-			else
-			{
-				System.out.println("That is incorrect.");
-			}
-			
-			//total += 1.0;
-		}
-		e.calculateScore();
-	}
-	
-	// 4. Calculate score.
+	// Get the score to be able to present it to .
 	public void receiveScore()
 	{
 		if(chooseTest.equalsIgnoreCase("A"))
