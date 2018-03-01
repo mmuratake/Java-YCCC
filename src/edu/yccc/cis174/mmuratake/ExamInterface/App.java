@@ -22,8 +22,8 @@ public class App {
 	
 	static Scanner console = new Scanner(System.in);
 	
-	// Called score2 because it takes the value of score from either EnglishExam or JavaExam, 
-	// 		depending on which test the user took.
+	// Stores the value of score from either EnglishExam or JavaExam, depending on which test the user took.
+	// (Because the score is calculated over there.)
 	static double score2;
 	// To store the user's name.
 	static String name;
@@ -118,7 +118,7 @@ public class App {
 		}
 	}
 	
-	
+	// Write the user's name, the test taken, and the score.
 	public void writeExamResults(String studentName, double score) throws IOException
 	{
 		FileWriter fStream = new FileWriter("InterfaceExamResults.txt", true);
