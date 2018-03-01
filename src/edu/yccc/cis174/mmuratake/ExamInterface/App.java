@@ -38,14 +38,6 @@ public class App {
 		a.receiveScore();
 		System.out.println("\r\nYou are now done with the test!");
 		System.out.println(name + ", your score is " + score2 + "%.");
-		try 
-		{
-			a.writeExamResults(name, score2);
-		} 
-		catch (IOException e)
-		{
-			e.printStackTrace();
-		}
 	}
 	
 	
@@ -95,24 +87,6 @@ public class App {
 		{
 			score2 = e.calculateScore();
 		}
-	}
-	
-	// Write the user's name, the test taken, and the score.
-	public void writeExamResults(String studentName, double score) throws IOException
-	{
-		FileWriter fStream = new FileWriter("InterfaceExamResults.txt", true);
-		BufferedWriter writer = new BufferedWriter(fStream);
-		if(chooseTest.equalsIgnoreCase("A"))
-		{
-			writer.write("Java Exam \r\n");
-		}
-		else if(chooseTest.equalsIgnoreCase("B"))
-		{
-			writer.write("English Exam \r\n");
-		}
-		writer.write(studentName + " got a score of " + score + "%");
-		writer.write("\r\n---------------------------------------------------------\r\n");
-		writer.close();
 	}
 
 }

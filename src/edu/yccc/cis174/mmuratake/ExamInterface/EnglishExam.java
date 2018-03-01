@@ -115,6 +115,15 @@ public class EnglishExam implements Exam{
 		}
 		
 		e.calculateScore();
+		
+		try 
+		{
+			writeExamResults(App.name, score);
+		} 
+		catch (IOException e1)
+		{
+			e1.printStackTrace();
+		}
 	}
 
 
