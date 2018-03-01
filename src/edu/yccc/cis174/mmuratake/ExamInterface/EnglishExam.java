@@ -136,7 +136,7 @@ public class EnglishExam implements Exam{
 	// Write the user's name, the test taken, and the score.
 	public void writeExamResults(String studentName, double score) throws IOException
 	{
-		FileWriter fStream = new FileWriter("InterfaceExamResults.txt", true);
+		FileWriter fStream = new FileWriter("EnglishExamResults.txt", true);
 		BufferedWriter writer = new BufferedWriter(fStream);
 		writer.write(studentName + " got a score of " + score + "%");
 		writer.write("\r\n---------------------------------------------------------\r\n");
