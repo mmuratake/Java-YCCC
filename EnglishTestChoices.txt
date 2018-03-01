@@ -1,5 +1,5 @@
-A. Yes   B. No
-A. Grammer   B. Grammar   C. Grammor
+A. Yes      B. No
+A. Grammer      B. Grammar      C. Grammor
 A. Cat		B. Become	  C. Run
 A. Ran		B. To Run	  C. Running
 A. Ran		B. To Run	  C. Running

@@ -1,5 +1,12 @@
 package edu.yccc.cis174.mmuratake.ExamInterface;
 
+/**
+ *  Mami Muratake
+ *  February 28 2018
+ *  
+ *  Project #2: Expanding on Project #1 and Using Interface 
+ */
+
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -13,8 +20,11 @@ public class EnglishExam implements Exam{
 	
 	static Scanner console = new Scanner(System.in);
 	
+	// The total number of questions.
 	static double total = 0.0;
+	// The number of questions the user got right.
 	static double correct = 0.0;
+	// The score the user got for the test.
 	static double score = 0.0;
 
 
@@ -114,7 +124,7 @@ public class EnglishExam implements Exam{
 			total += 1.0;
 		}
 		
-		e.calculateScore();
+		calculateScore();
 		
 		try 
 		{
@@ -126,7 +136,7 @@ public class EnglishExam implements Exam{
 		}
 	}
 
-
+	// Calculate the score.
 	public double calculateScore() 
 	{
 		score = (correct / total) * 100;
@@ -134,7 +144,7 @@ public class EnglishExam implements Exam{
 		return score;
 	}
 	
-	// Write the user's name, the test taken, and the score.
+	// Write the user's name and the score to a file.
 	public void writeExamResults(String studentName, double score) throws IOException
 	{
 		FileWriter fStream = new FileWriter("EnglishExamResults.txt", true);
