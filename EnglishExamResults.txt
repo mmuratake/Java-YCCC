@@ -1,4 +1,4 @@
-Scores for Users of Project #2
+Scores for Users of Project #2: English Exam
 
 Java Exam /r/nUbagawa got a score of 60.0%
 ---------------------------------------------------------
@@ -23,4 +23,6 @@ Mitsubishi got a score of 100.0%
 Testuya got a score of 90.0%
 ---------------------------------------------------------
 Terako got a score of 100.0%
+---------------------------------------------------------
+You got a score of 100.0%
 ---------------------------------------------------------
