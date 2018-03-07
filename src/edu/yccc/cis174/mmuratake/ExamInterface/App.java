@@ -18,8 +18,6 @@ public class App {
 	
 	static Scanner console = new Scanner(System.in);
 	
-	// Stores the value of score from the test the user took. (Because the score is calculated over there.)
-	static double score2;
 	// To store the user's name.
 	static String name;
 	// To store which test the user chose to take.
@@ -31,7 +29,6 @@ public class App {
 		name = console.next();
 		a.examChoices();
 		System.out.println("\r\nYou are now done with the test!");
-		System.out.println(name + ", your score is " + score2 + "%.");
 	}
 	
 	

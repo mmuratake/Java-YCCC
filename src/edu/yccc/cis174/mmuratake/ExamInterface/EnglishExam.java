@@ -125,6 +125,7 @@ public class EnglishExam implements Exam{
 		}
 		
 		calculateScore();
+		System.out.println(App.name + ", your score is " + score + "%.");
 		
 		try 
 		{
@@ -140,7 +141,6 @@ public class EnglishExam implements Exam{
 	public double calculateScore() 
 	{
 		score = (correct / total) * 100;
-		App.score2 = score;
 		return score;
 	}
 	
