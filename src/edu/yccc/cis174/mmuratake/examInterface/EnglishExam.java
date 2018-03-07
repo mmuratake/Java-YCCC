@@ -81,7 +81,7 @@ public class EnglishExam implements Exam{
 		return question;
 	}
 	
-	
+	// To actually present the user with questions and prompt them for an answer.
 	public void giveExam()
 	{
 		EnglishExam e = new EnglishExam();
