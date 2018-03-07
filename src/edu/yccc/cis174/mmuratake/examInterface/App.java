@@ -28,7 +28,6 @@ public class App {
 		System.out.println("Hello! What is your name?");
 		name = console.next();
 		a.examChoices();
-		System.out.println("\r\nYou are now done with the test!");
 	}
 	
 	

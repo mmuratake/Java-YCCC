@@ -125,6 +125,8 @@ public class EnglishExam implements Exam{
 		}
 		
 		calculateScore();
+		
+		System.out.println("\r\nYou are now done with the test!");
 		System.out.println(App.name + ", your score is " + score + "%.");
 		
 		try 
