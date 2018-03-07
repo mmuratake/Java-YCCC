@@ -1,10 +1,10 @@
-package edu.yccc.cis174.mmuratake.ExamInterface;
+package edu.yccc.cis174.mmuratake.examInterface;
 
 /**
  *  Mami Muratake
  *  February 28 2018
  *  
- *  Project #2: Expanding on Project #1 and Using Interface
+ *  Project #2: Expanding on Project #1 and Using Interface 
  */
 
 import java.io.BufferedWriter;
@@ -16,8 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-
-public class JavaExam implements Exam {
+public class EnglishExam implements Exam{
 	
 	static Scanner console = new Scanner(System.in);
 	
@@ -27,23 +26,24 @@ public class JavaExam implements Exam {
 	static double correct = 0.0;
 	// The score the user got for the test.
 	static double score = 0.0;
-	
+
+
 	public List<Question> loadQuestion() 
 	{
 		// Create a list of questions.
 		List<Question> question = new ArrayList<Question>();
-				
+						
 		Scanner fileScanner = null;
 		Scanner fileScanner2 = null;
 		Scanner fileScanner3 = null;
-				
+						
 		try
 		{
 			// Read from three files: the file with the test questions, the test answers, and the choices (if any).
-			fileScanner = new Scanner(new File("J:\\git\\Java-YCCC\\JavaTestQuestions.txt"));
-			fileScanner2 = new Scanner(new File("J:\\git\\Java-YCCC\\JavaTestAnswers.txt"));
-			fileScanner3 = new Scanner(new File("J:\\git\\Java-YCCC\\JavaTestChoices.txt"));
-				
+			fileScanner = new Scanner(new File("J:\\git\\Java-YCCC\\EnglishTestQuestions.txt"));
+			fileScanner2 = new Scanner(new File("J:\\git\\Java-YCCC\\EnglishTestAnswers.txt"));
+			fileScanner3 = new Scanner(new File("J:\\git\\Java-YCCC\\EnglishTestChoices.txt"));
+						
 			while(fileScanner.hasNextLine() && fileScanner2.hasNextLine())   
 			{
 				// Convert what is read in the questions file to a string question.
@@ -52,7 +52,7 @@ public class JavaExam implements Exam {
 				String answer = fileScanner2.nextLine();
 				// Convert what is read in the choices file to a string choices.
 				String choices = fileScanner3.nextLine();
-						
+								
 				// If the question is not multiple choice, then it only has a question and an answer.
 				if(choices.equals(null))
 				{
@@ -77,14 +77,15 @@ public class JavaExam implements Exam {
 			fileScanner2.close();
 			fileScanner3.close();
 		}
-				
+						
 		return question;
 	}
 	
+	
 	public void giveExam()
 	{
-		JavaExam j = new JavaExam();
-		List<Question> testQuestions = j.loadQuestion();
+		EnglishExam e = new EnglishExam();
+		List<Question> testQuestions = e.loadQuestion();
 		for(Question questions : testQuestions)
 		{
 			// If the question is multiple choice.
@@ -146,7 +147,7 @@ public class JavaExam implements Exam {
 	// Write the user's name and the score to a file.
 	public void writeExamResults(String studentName, double score) throws IOException
 	{
-		FileWriter fStream = new FileWriter("JavaExamResults.txt", true);
+		FileWriter fStream = new FileWriter("EnglishExamResults.txt", true);
 		BufferedWriter writer = new BufferedWriter(fStream);
 		writer.write(studentName + " got a score of " + score + "%");
 		writer.write("\r\n---------------------------------------------------------\r\n");

@@ -1,4 +1,4 @@
-package edu.yccc.cis174.mmuratake.ExamInterface;
+package edu.yccc.cis174.mmuratake.examInterface;
 
 import java.util.Scanner;
 
