@@ -2,9 +2,12 @@ package edu.yccc.cis174.mmuratake.UI;
 
 import java.awt.EventQueue;
 
+// In order to install software (this Application Window thing), go to Slack, follow url, copy the url, get over here, click "Help", 
+// "Install New Software", paste, then take it away from there. Yeah!
+
 import javax.swing.JFrame;
 
-public class UIPractice {
+public class ApplicationWindow {
 
 	private JFrame frame;
 
@@ -19,7 +22,7 @@ public class UIPractice {
 			{
 				try 
 				{
-					UIPractice window = new UIPractice();
+					ApplicationWindow window = new ApplicationWindow();
 					window.frame.setVisible(true);
 				} 
 				catch (Exception e) 
@@ -33,7 +36,7 @@ public class UIPractice {
 	/**
 	 * Create the application.
 	 */
-	public UIPractice() 
+	public ApplicationWindow() 
 	{
 		initialize();
 	}
