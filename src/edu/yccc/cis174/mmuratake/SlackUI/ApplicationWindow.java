@@ -7,8 +7,6 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JButton;
-import javax.swing.JTextArea;
-import javax.swing.JTextPane;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JTextField;
@@ -73,9 +71,6 @@ public class ApplicationWindow {
 		txtJavaIsGreat.setBounds(10, 29, 86, 20);
 		frame.getContentPane().add(txtJavaIsGreat);
 		txtJavaIsGreat.setColumns(10);
-		
-		
-		
 		
 	}
 }
