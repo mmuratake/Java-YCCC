@@ -6,10 +6,18 @@ import java.awt.EventQueue;
 // "Install New Software", paste, then take it away from there. Yeah!
 
 import javax.swing.JFrame;
+import javax.swing.JButton;
+import javax.swing.JTextArea;
+import javax.swing.JTextPane;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.JTextField;
 
 public class ApplicationWindow {
 
 	private JFrame frame;
+	private JTextField txtJavaIsGreat;
+	private SlackService ss = new SlackService();
 
 	/**
 	 * Launch the application.
@@ -50,6 +58,24 @@ public class ApplicationWindow {
 		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
+		
+		JButton btnSubmit = new JButton("Submit");
+		btnSubmit.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				ss.submitTextToSlack(txtJavaIsGreat.getText());
+			}
+		});
+		btnSubmit.setBounds(335, 227, 89, 23);
+		frame.getContentPane().add(btnSubmit);
+		
+		txtJavaIsGreat = new JTextField();
+		txtJavaIsGreat.setText("Java is great!");
+		txtJavaIsGreat.setBounds(10, 29, 86, 20);
+		frame.getContentPane().add(txtJavaIsGreat);
+		txtJavaIsGreat.setColumns(10);
+		
+		
+		
+		
 	}
-
 }
