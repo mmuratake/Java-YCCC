@@ -1,41 +1,16 @@
 package edu.yccc.cis174.finalProject;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Character {
 	
-	String name;
-	List<String> likes = new ArrayList<String>();
-	List<String> dislikes = new ArrayList<String>();
-	List<String> hobbies = new ArrayList<String>();
-	List<String> friends = new ArrayList<String>();
-	List<String> family = new ArrayList<String>();
+	// I need a list to determine each of these stats, but these stats themselves are not lists. They are one word answers.
 	
-	public List<String> getLikes() 
-	{
-		return likes;
-	}
-	public void setLikes(List<String> likes) 
-	{
-		this.likes = likes;
-	}
-	public List<String> getDislikes() 
-	{
-		return dislikes;
-	}
-	public void setDislikes(List<String> dislikes) 
-	{
-		this.dislikes = dislikes;
-	}
-	public List<String> getHobbies() 
-	{
-		return hobbies;
-	}
-	public void setHobbies(List<String> hobbies) 
-	{
-		this.hobbies = hobbies;
-	}
+	String name;
+	String likes;
+	String dislikes;
+	String hobbies;
+	String friends;
+	String family;
+	
 	public String getName() 
 	{
 		return name;
@@ -44,7 +19,46 @@ public class Character {
 	{
 		this.name = name;
 	}
-	
+	public String getLikes()
+	{
+		return likes;
+	}
+	public void setLikes(String likes) 
+	{
+		this.likes = likes;
+	}
+	public String getDislikes() 
+	{
+		return dislikes;
+	}
+	public void setDislikes(String dislikes) 
+	{
+		this.dislikes = dislikes;
+	}
+	public String getHobbies() 
+	{
+		return hobbies;
+	}
+	public void setHobbies(String hobbies) 
+	{
+		this.hobbies = hobbies;
+	}
+	public String getFriends()
+{
+		return friends;
+	}
+	public void setFriends(String friends) 
+	{
+		this.friends = friends;
+	}
+	public String getFamily() 
+	{
+		return family;
+	}
+	public void setFamily(String family) 
+	{
+		this.family = family;
+	}
 	
 	
 

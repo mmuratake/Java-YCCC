@@ -29,8 +29,6 @@ public class App {
 	 * 			- If only their first name is capitalized, could it work?
 	 * 
 	 * 
-	 * 
-	 * 
 	 * Okay let's start simple. Five acceptance criteria.
 	 * 
 	 * Going with what I got.
@@ -42,6 +40,12 @@ public class App {
 	 * 5. Different experience every time you play.
 	 * 
 	 * Cool, except for #4. 
+	 * 
+	 * 
+	 * Alright, backup planning. Even if something fails, I can still do what I want.
+	 * 
+	 *  4. If I can't read from file, I might be able to implement the interface thing. Wait just a minute.
+	 *  3. If I can't read from file, there's no point writing to file. But I can still record whether you've won or lost.
 	 * 
 	 */
 	
