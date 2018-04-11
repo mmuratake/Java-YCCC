@@ -1,13 +1,16 @@
 package edu.yccc.cis174.finalProject;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Character {
 	
 	String name;
-	List<String> likes;
-	List<String> dislikes;
-	List<String> hobbies;
+	List<String> likes = new ArrayList<String>();
+	List<String> dislikes = new ArrayList<String>();
+	List<String> hobbies = new ArrayList<String>();
+	List<String> friends = new ArrayList<String>();
+	List<String> family = new ArrayList<String>();
 	
 	public List<String> getLikes() 
 	{
