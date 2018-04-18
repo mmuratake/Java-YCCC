@@ -11,6 +11,8 @@ public class Tobias implements Character{
 	
 	private static Random random = new Random();
 	static Scanner console = new Scanner(System.in);
+	
+	String guess;
 
 
 	public String name() 
@@ -27,6 +29,10 @@ public class Tobias implements Character{
 		likes.add("I like Coke.");
 		int index = random.nextInt(likes.size());
 		System.out.println(likes.get(index));
+		
+		console.next();
+		
+		dislikes();
 	}
 
 	public void dislikes() 
@@ -37,6 +43,10 @@ public class Tobias implements Character{
 		dislikes.add("Girls make me nervous. What am I supposed to say?");
 		int index = random.nextInt(dislikes.size());
 		System.out.println(dislikes.get(index));
+		
+		console.next();
+		
+		hobbies();
 	}
 
 	public void hobbies() 
@@ -48,6 +58,10 @@ public class Tobias implements Character{
 		hobbies.add("What the heck? Do I have one?");
 		int index = random.nextInt(hobbies.size());
 		System.out.println(hobbies.get(index));
+		
+		console.next();
+		
+		friends();
 	}
 
 	public void friends() 
@@ -58,6 +72,10 @@ public class Tobias implements Character{
 		friends.add("I have a friend who really likes the dictionary. He's weird.");
 		int index = random.nextInt(friends.size());
 		System.out.println(friends.get(index));
+		
+		console.next();
+		
+		family();
 	}
 
 	public void family() 
@@ -68,6 +86,10 @@ public class Tobias implements Character{
 		family.add("I'm an only child.");
 		int index = random.nextInt(family.size());
 		System.out.println(family.get(index));
+		
+		console.next();
+		
+		
 	}
 
 	public void greeting() 
@@ -78,6 +100,26 @@ public class Tobias implements Character{
 		greetings.add("Hey.");
 		int index = random.nextInt(greetings.size());
 		System.out.println(greetings.get(index));	
+		
+		console.next();
+		
+		likes();
+	}
+	
+	public void guess()
+	{
+		System.out.println("Can you guess who I am?");
+		
+		guess = console.next();
+		
+		if(guess.equals(name()))
+		{
+			System.out.println("You're right. Nice!");
+		}
+		else
+		{
+			System.out.println("That ain't right. I'm Tobias. Think you can get me next time?");
+		}
 	}
 	
 }

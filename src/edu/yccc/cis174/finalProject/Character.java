@@ -10,5 +10,6 @@ public interface Character {
 	public void family();
 	
 	public void greeting();
+	public void guess();
 
 }

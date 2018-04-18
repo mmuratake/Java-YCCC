@@ -3,10 +3,13 @@ package edu.yccc.cis174.finalProject;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.Scanner;
 
 public class Sara implements Character{
 	
 	private static Random random = new Random();
+	static Scanner console = new Scanner(System.in);
+
 
 	public String name() 
 	{
@@ -55,11 +58,14 @@ public class Sara implements Character{
 		System.out.println(friends.get(index));		
 	}
 
-	@Override
 	public void family()
 	{
-		// TODO Auto-generated method stub
-		
+		List<String> family = new ArrayList<String>();
+		family.add("I have a brother.");
+		family.add("I have a half-brother who seems to like me.");
+		family.add("A younger brother, we're not that close.");
+		int index = random.nextInt(family.size());
+		System.out.println(family.get(index));		
 	}
 
 	public void greeting() 
@@ -70,6 +76,12 @@ public class Sara implements Character{
 		greetings.add("Hey. Nice day over there?");
 		int index = random.nextInt(greetings.size());
 		System.out.println(greetings.get(index));
+		
+	}
+	
+	public void guess()
+	{
+		
 	}
 
 }
