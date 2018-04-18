@@ -10,16 +10,15 @@ public class GuessingGame {
 	private static Random random = new Random();
 	static Scanner console = new Scanner(System.in);
 	
-	public static void play()
+	public static void main(String[] args)
 	{
 		// 1. Choose a character (at random). Needs a list of characters, then chooses one randomly.
 		List<String> characterList = new ArrayList<String>();
 		characterList.add("Tobias");
-		characterList.add("Samuel");
-		characterList.add("Sara");
-		characterList.add("Violet");
+		//characterList.add("Samuel");
+		//characterList.add("Sara");
+		//characterList.add("Violet");
 		int index = random.nextInt(characterList.size());
-		System.out.println(characterList.get(index));
 		
 		
 		// 2. Determines the rest of the game by choosing the character for good.

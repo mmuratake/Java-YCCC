@@ -51,8 +51,7 @@ public class App {
 	
 	public static void main(String[] args)
 	{
-		GuessingGame gg = new GuessingGame();
-		gg.play();
+		
 	}
 
 }

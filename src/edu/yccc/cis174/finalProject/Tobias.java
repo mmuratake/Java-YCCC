@@ -12,6 +12,8 @@ public class Tobias implements Character{
 	private static Random random = new Random();
 	static Scanner console = new Scanner(System.in);
 	
+	User u = new User();
+	
 	String guess;
 
 
@@ -30,7 +32,9 @@ public class Tobias implements Character{
 		int index = random.nextInt(likes.size());
 		System.out.println(likes.get(index));
 		
-		console.next();
+		System.out.println("What do you like?");
+		u.setLikes(console.next());
+		System.out.println("");
 		
 		dislikes();
 	}
@@ -44,7 +48,9 @@ public class Tobias implements Character{
 		int index = random.nextInt(dislikes.size());
 		System.out.println(dislikes.get(index));
 		
-		console.next();
+		System.out.println("What do you dislike?");
+		u.setDislikes(console.next());
+		System.out.println("");
 		
 		hobbies();
 	}
@@ -55,11 +61,14 @@ public class Tobias implements Character{
 		hobbies.add("Nothing in particular, I guess.");
 		hobbies.add("I feel like I do nothing else with my life than hanging out with my friends.");
 		hobbies.add("You wish I were a more interesting person.");
-		hobbies.add("What the heck? Do I have one?");
+		hobbies.add("What the heck? Do I have a hobby?");
 		int index = random.nextInt(hobbies.size());
 		System.out.println(hobbies.get(index));
 		
-		console.next();
+		System.out.println("What's one of your hobbies?");
+		
+		u.setHobbies(console.next());	
+		System.out.println("");
 		
 		friends();
 	}
@@ -73,7 +82,10 @@ public class Tobias implements Character{
 		int index = random.nextInt(friends.size());
 		System.out.println(friends.get(index));
 		
-		console.next();
+		System.out.println("What's the name of one of your friends?");
+		
+		u.setFriends(console.next());
+		System.out.println("");
 		
 		family();
 	}
@@ -87,8 +99,20 @@ public class Tobias implements Character{
 		int index = random.nextInt(family.size());
 		System.out.println(family.get(index));
 		
-		console.next();
+		System.out.println("Do you have any siblings or pets? Yes or no's fine.");
 		
+		if(console.next().equalsIgnoreCase("yes") || console.next().equalsIgnoreCase("no") || console.next().equals("yeah"))
+		{
+			u.setFamily(console.next());
+			System.out.println("");
+			
+			guess();
+		}
+		else
+		{
+			System.out.println("What the heck? Was that a yes or no answer?");
+			family();
+		}
 		
 	}
 
@@ -102,6 +126,7 @@ public class Tobias implements Character{
 		System.out.println(greetings.get(index));	
 		
 		console.next();
+		System.out.println("");
 		
 		likes();
 	}
@@ -120,6 +145,9 @@ public class Tobias implements Character{
 		{
 			System.out.println("That ain't right. I'm Tobias. Think you can get me next time?");
 		}
+		
+		System.out.println("What's your name?");
+		u.setName(console.next());
 	}
 	
 }
