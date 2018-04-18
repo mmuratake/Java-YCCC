@@ -34,18 +34,25 @@ public class Sara implements Character{
 		System.out.println(dislikes.get(index));
 	}
 
-	@Override
 	public void hobbies() 
 	{
-		// TODO Auto-generated method stub
-		
+		List<String> hobbies = new ArrayList<String>();
+		hobbies.add("I like wreaking my friend. Heh. I do nothing else with my life.");
+		hobbies.add("I hang with my friends a lot.");
+		hobbies.add("Being a jackass. Heh heh.");
+		hobbies.add("Probably being the worst friend ever.");
+		int index = random.nextInt(hobbies.size());
+		System.out.println(hobbies.get(index));		
 	}
 
-	@Override
 	public void friends() 
 	{
-		// TODO Auto-generated method stub
-		
+		List<String> friends = new ArrayList<String>();
+		friends.add("I have a friend whose life I make miserable. But we stick together anyway.");
+		friends.add("This guy named Joseph, who shares the same sense of humor as me.");
+		friends.add("A friend I haven't seen in a while. I used to make his life terrible.");
+		int index = random.nextInt(friends.size());
+		System.out.println(friends.get(index));		
 	}
 
 	@Override
@@ -55,11 +62,14 @@ public class Sara implements Character{
 		
 	}
 
-	@Override
 	public void greeting() 
 	{
-		// TODO Auto-generated method stub
-		
+		List<String> greetings = new ArrayList<String>();
+		greetings.add("Hey. Heh. Let's start.");
+		greetings.add("Hi there. Wanna start?");
+		greetings.add("Hey. Nice day over there?");
+		int index = random.nextInt(greetings.size());
+		System.out.println(greetings.get(index));
 	}
 
 }
