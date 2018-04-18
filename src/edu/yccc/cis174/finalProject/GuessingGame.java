@@ -18,6 +18,24 @@ public class GuessingGame {
 		characterList.add("Prince");
 		int index = random.nextInt(characterList.size());
 		System.out.println(characterList.get(index));
+		
+		// 2. Determines the rest of the game by choosing the character for good.
+		if(characterList.get(index).equals("Tobias"))
+		{
+			// Call whatever.
+		}
+		if(characterList.get(index).equals("Radical"))
+		{
+			
+		}
+		if(characterList.get(index).equals("Fane"))
+		{
+			
+		}
+		if(characterList.get(index).equals("Prince"))
+		{
+			
+		}
 	}
 	
 	public static void loadCharacters()
