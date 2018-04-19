@@ -29,8 +29,8 @@ public class Tobias implements Character{
 		likes.add("Chocolates are good.");
 		likes.add("My friend got me this cool watch and I really like it.");
 		likes.add("I like Coke.");
-		int index = random.nextInt(likes.size());
-		System.out.println(likes.get(index));
+		int like = random.nextInt(likes.size());
+		System.out.println(likes.get(like));
 		
 		System.out.println("What do you like?");
 		u.setLikes(console.next());
@@ -45,8 +45,8 @@ public class Tobias implements Character{
 		dislikes.add("I'm not that good at reading. It bores me, I guess.");
 		dislikes.add("I don't do well with kids. They scare me, kinda.");
 		dislikes.add("Girls make me nervous. What am I supposed to say?");
-		int index = random.nextInt(dislikes.size());
-		System.out.println(dislikes.get(index));
+		int dislike = random.nextInt(dislikes.size());
+		System.out.println(dislikes.get(dislike));
 		
 		System.out.println("What do you dislike?");
 		u.setDislikes(console.next());
@@ -59,11 +59,11 @@ public class Tobias implements Character{
 	{
 		List<String> hobbies = new ArrayList<String>();
 		hobbies.add("Nothing in particular, I guess.");
-		hobbies.add("I feel like I do nothing else with my life than hanging out with my friends.");
+		hobbies.add("I feel like I do nothing else with my life other than hanging out with my friends.");
 		hobbies.add("You wish I were a more interesting person.");
 		hobbies.add("What the heck? Do I have a hobby?");
-		int index = random.nextInt(hobbies.size());
-		System.out.println(hobbies.get(index));
+		int hobby = random.nextInt(hobbies.size());
+		System.out.println(hobbies.get(hobby));
 		
 		System.out.println("What's one of your hobbies?");
 		
@@ -79,8 +79,8 @@ public class Tobias implements Character{
 		friends.add("I got this friend who's a treehugger. Cept he don't hug trees.");
 		friends.add("There's this friend of mine who's really shy. Barely talks.");
 		friends.add("I have a friend who really likes the dictionary. He's weird.");
-		int index = random.nextInt(friends.size());
-		System.out.println(friends.get(index));
+		int friend = random.nextInt(friends.size());
+		System.out.println(friends.get(friend));
 		
 		System.out.println("What's the name of one of your friends?");
 		
@@ -96,8 +96,8 @@ public class Tobias implements Character{
 		family.add("I don't have any pets.");
 		family.add("I don't got any siblings.");
 		family.add("I'm an only child.");
-		int index = random.nextInt(family.size());
-		System.out.println(family.get(index));
+		int familyMember = random.nextInt(family.size());
+		System.out.println(family.get(familyMember));
 		
 		System.out.println("Do you have any siblings or pets? Yes or no's fine.");
 		
@@ -122,8 +122,8 @@ public class Tobias implements Character{
 		greetings.add("Hey. Do I know you? Let's start.");
 		greetings.add("Hey. You wanna start?");
 		greetings.add("Hey.");
-		int index = random.nextInt(greetings.size());
-		System.out.println(greetings.get(index));	
+		int greetingPhrase = random.nextInt(greetings.size());
+		System.out.println(greetings.get(greetingPhrase));	
 		
 		console.next();
 		System.out.println("");
