@@ -12,6 +12,8 @@ public class GuessingGame {
 	
 	public static void main(String[] args)
 	{
+		
+		
 		// 1. Choose a character (at random). Needs a list of characters, then chooses one randomly.
 		List<String> characterList = new ArrayList<String>();
 		characterList.add("Tobias");
@@ -54,6 +56,8 @@ public class GuessingGame {
 		int index = random.nextInt(questions.size());
 		System.out.println(questions.get(index));
 		
+		
+		
 		return null;
 	}
 	
@@ -62,6 +66,25 @@ public class GuessingGame {
 	{
 		GuessingGame gg = new GuessingGame();
 		//gg.
+	}
+	
+	public static void rules()
+	{
+		System.out.println("Have you played this game before?");
+		System.out.println("1.Yes    2.No");
+		if(console.next().equals("1"))
+		{
+			System.out.println("Good luck. Press any key to continue.");
+		}
+		else if(console.next().equals("2"))
+		{
+			System.out.println("Explain the rules.");
+		}
+		else
+		{
+			System.out.println("You have not entered a valid response. Please try again.");
+			rules();
+		}
 	}
 
 }
