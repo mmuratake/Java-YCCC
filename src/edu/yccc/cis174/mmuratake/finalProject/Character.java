@@ -1,4 +1,4 @@
-package edu.yccc.cis174.finalProject;
+package edu.yccc.cis174.mmuratake.finalProject;
 
 public interface Character {
 	
