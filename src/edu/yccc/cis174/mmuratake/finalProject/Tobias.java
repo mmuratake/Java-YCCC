@@ -1,5 +1,6 @@
 package edu.yccc.cis174.mmuratake.finalProject;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -33,7 +34,7 @@ public class Tobias implements Character{
 		System.out.println(likes.get(like));
 		
 		System.out.println("What do you like?");
-		u.setLikes(console.next());
+		u.setLikes(console.next().toLowerCase());
 		System.out.println("");
 		
 		dislikes();
@@ -49,7 +50,7 @@ public class Tobias implements Character{
 		System.out.println(dislikes.get(dislike));
 		
 		System.out.println("What do you dislike?");
-		u.setDislikes(console.next());
+		u.setDislikes(console.next().toLowerCase());
 		System.out.println("");
 		
 		hobbies();
@@ -66,7 +67,7 @@ public class Tobias implements Character{
 		System.out.println(hobbies.get(hobby));
 		
 		System.out.println("What's one of your hobbies?");
-		u.setHobbies(console.next());	
+		u.setHobbies(console.next().toLowerCase());	
 		System.out.println("");
 		
 		friends();
@@ -83,7 +84,7 @@ public class Tobias implements Character{
 		
 		System.out.println("What's the name of one of your friends?");
 		
-		u.setFriends(console.next());
+		u.setFriends(console.next().toLowerCase());
 		System.out.println("");
 		
 		family();
@@ -100,7 +101,7 @@ public class Tobias implements Character{
 		
 		System.out.println("Do you have any siblings or pets?");
 				
-		u.setFamily(console.next());
+		u.setFamily(console.next().toLowerCase());
 		System.out.println("");
 			
 		guess();
@@ -138,7 +139,17 @@ public class Tobias implements Character{
 		}
 		
 		System.out.println("What's your name?");
-		u.setName(console.next());
+		u.setName(console.next().toUpperCase());
+		
+		WriteToFile wtf = new WriteToFile();
+		try 
+		{
+			wtf.writeUserStats(u.getLikes(), u.getDislikes(), u.getHobbies(), u.getFriends(), u.getFamily(), u.getName());
+		} 
+		catch (IOException e) 
+		{
+			e.printStackTrace();
+		}
 	}
 	
 }
