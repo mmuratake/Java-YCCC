@@ -6,41 +6,44 @@ public class AskUserQuestions {
 	
 	static Scanner console = new Scanner(System.in);
 	
-	static User u = new User();
+	User u = new User();
 	
-	public static void askLikes()
+	public void askLikes()
 	{
 		System.out.println("What do you like?");
-		String userLikes = console.next();
-		u.setLikes(userLikes.toLowerCase());
-		System.out.println("");
+		u.setLikes(console.nextLine().toLowerCase());
+		System.out.println(u.getLikes() + "");
 	}
 	
-	public static void askDislikes()
+	public void askDislikes()
 	{
 		System.out.println("What do you dislike?");
-		u.setDislikes(console.next().toLowerCase());
+		u.setDislikes(console.nextLine().toLowerCase());
+		System.out.println(u.getDislikes());
 		System.out.println("");
 	}
 	
-	public static void askHobbies()
+	public void askHobbies()
 	{
 		System.out.println("What's one of your hobbies?");
-		u.setHobbies(console.next().toLowerCase());	
+		u.setHobbies(console.nextLine().toLowerCase());	
+		System.out.println(u.getHobbies());
 		System.out.println("");
 	}
 	
-	public static void askFriends()
+	public void askFriends()
 	{
 		System.out.println("What's the name of one of your friends?");
-		u.setFriends(console.next().toLowerCase());
+		u.setFriends(console.nextLine().toLowerCase());
+		System.out.println(u.getFriends());
 		System.out.println("");
 	}
 	
-	public static void askFamily()
+	public void askFamily()
 	{
 		System.out.println("Do you have any siblings or pets?");
-		u.setFamily(console.next().toLowerCase());
+		u.setFamily(console.nextLine().toLowerCase());
+		System.out.println(u.getFamily());
 		System.out.println("");
 	}
 

@@ -13,6 +13,7 @@ public class Tobias implements Character{
 	private static Random random = new Random();
 	static Scanner console = new Scanner(System.in);
 	
+	AskUserQuestions auq = new AskUserQuestions();
 	
 	String guess;
 
@@ -32,7 +33,7 @@ public class Tobias implements Character{
 		int like = random.nextInt(likes.size());
 		System.out.println(likes.get(like));
 		
-
+		auq.askLikes();
 		
 		dislikes();
 	}
@@ -46,7 +47,7 @@ public class Tobias implements Character{
 		int dislike = random.nextInt(dislikes.size());
 		System.out.println(dislikes.get(dislike));
 		
-		
+		auq.askDislikes();
 		
 		hobbies();
 	}
@@ -61,6 +62,7 @@ public class Tobias implements Character{
 		int hobby = random.nextInt(hobbies.size());
 		System.out.println(hobbies.get(hobby));
 		
+		auq.askHobbies();
 		
 		friends();
 	}
@@ -74,6 +76,7 @@ public class Tobias implements Character{
 		int friend = random.nextInt(friends.size());
 		System.out.println(friends.get(friend));
 		
+		auq.askFriends();
 		
 		family();
 	}
@@ -87,7 +90,7 @@ public class Tobias implements Character{
 		int familyMember = random.nextInt(family.size());
 		System.out.println(family.get(familyMember));
 		
-		
+		auq.askFamily();
 			
 		guess();
 		
@@ -124,12 +127,12 @@ public class Tobias implements Character{
 		}
 		
 		System.out.println("What's your name?");
-		AskUserQuestions.u.setName(console.next().toUpperCase());
+		auq.u.setName(console.next().toUpperCase());
 		
 		WriteToFile wtf = new WriteToFile();
 		try 
 		{
-			wtf.writeUserStats(AskUserQuestions.u.getLikes(), AskUserQuestions.u.getDislikes(), AskUserQuestions.u.getHobbies(), AskUserQuestions.u.getFriends(), AskUserQuestions.u.getFamily(), AskUserQuestions.u.getName());
+			wtf.writeUserStats(auq.u.getLikes(), auq.u.getDislikes(), auq.u.getHobbies(), auq.u.getFriends(), auq.u.getFamily(), auq.u.getName());
 		} 
 		catch (IOException e) 
 		{
