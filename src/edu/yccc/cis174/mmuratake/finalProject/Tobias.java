@@ -13,7 +13,6 @@ public class Tobias implements Character{
 	private static Random random = new Random();
 	static Scanner console = new Scanner(System.in);
 	
-	User u = new User();
 	
 	String guess;
 
@@ -33,9 +32,7 @@ public class Tobias implements Character{
 		int like = random.nextInt(likes.size());
 		System.out.println(likes.get(like));
 		
-		System.out.println("What do you like?");
-		u.setLikes(console.next().toLowerCase());
-		System.out.println("");
+
 		
 		dislikes();
 	}
@@ -49,9 +46,7 @@ public class Tobias implements Character{
 		int dislike = random.nextInt(dislikes.size());
 		System.out.println(dislikes.get(dislike));
 		
-		System.out.println("What do you dislike?");
-		u.setDislikes(console.next().toLowerCase());
-		System.out.println("");
+		
 		
 		hobbies();
 	}
@@ -66,9 +61,6 @@ public class Tobias implements Character{
 		int hobby = random.nextInt(hobbies.size());
 		System.out.println(hobbies.get(hobby));
 		
-		System.out.println("What's one of your hobbies?");
-		u.setHobbies(console.next().toLowerCase());	
-		System.out.println("");
 		
 		friends();
 	}
@@ -82,10 +74,6 @@ public class Tobias implements Character{
 		int friend = random.nextInt(friends.size());
 		System.out.println(friends.get(friend));
 		
-		System.out.println("What's the name of one of your friends?");
-		
-		u.setFriends(console.next().toLowerCase());
-		System.out.println("");
 		
 		family();
 	}
@@ -99,10 +87,7 @@ public class Tobias implements Character{
 		int familyMember = random.nextInt(family.size());
 		System.out.println(family.get(familyMember));
 		
-		System.out.println("Do you have any siblings or pets?");
-				
-		u.setFamily(console.next().toLowerCase());
-		System.out.println("");
+		
 			
 		guess();
 		
@@ -139,12 +124,12 @@ public class Tobias implements Character{
 		}
 		
 		System.out.println("What's your name?");
-		u.setName(console.next().toUpperCase());
+		AskUserQuestions.u.setName(console.next().toUpperCase());
 		
 		WriteToFile wtf = new WriteToFile();
 		try 
 		{
-			wtf.writeUserStats(u.getLikes(), u.getDislikes(), u.getHobbies(), u.getFriends(), u.getFamily(), u.getName());
+			wtf.writeUserStats(AskUserQuestions.u.getLikes(), AskUserQuestions.u.getDislikes(), AskUserQuestions.u.getHobbies(), AskUserQuestions.u.getFriends(), AskUserQuestions.u.getFamily(), AskUserQuestions.u.getName());
 		} 
 		catch (IOException e) 
 		{

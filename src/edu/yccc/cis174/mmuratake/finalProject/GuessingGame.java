@@ -18,7 +18,7 @@ public class GuessingGame {
 		List<String> characterList = new ArrayList<String>();
 		characterList.add("Tobias");
 		//characterList.add("Samuel");
-		characterList.add("Sara");
+		//characterList.add("Sara");
 		//characterList.add("Violet");
 		int index = random.nextInt(characterList.size());
 		
@@ -79,7 +79,9 @@ public class GuessingGame {
 		
 		if(played.equals("1"))
 		{
-			System.out.println("Good luck. Press any key to continue.\r\n");
+			System.out.println("Good luck. Press any key to continue.");
+			console.next();
+			System.out.println("");
 		}
 		else if(played.equals("2"))
 		{

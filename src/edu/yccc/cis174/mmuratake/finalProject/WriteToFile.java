@@ -15,7 +15,6 @@ public class WriteToFile {
 		writer.write(userHobby + "\r\n");
 		writer.write(userFriend + "\r\n");
 		writer.write(userFamily + "\r\n");
-		// Remember to make the name upper case.
 		writer.write(userName);
 		writer.write("\r\n---------------------------------------------------------\r\n");
 		writer.close();
