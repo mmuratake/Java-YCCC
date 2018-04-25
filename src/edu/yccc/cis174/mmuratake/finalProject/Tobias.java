@@ -25,7 +25,7 @@ public class Tobias implements Character{
 	public void likes() 
 	{
 		List<String> likes = new ArrayList<String>();
-		likes.add("I like hot dogs. They're good. No matter when.");
+		likes.add("I like hot dogs. They're good. No matter what you put in em.");
 		likes.add("Chocolates are good.");
 		likes.add("My friend got me this cool watch and I really like it.");
 		likes.add("I like Coke.");
@@ -59,14 +59,13 @@ public class Tobias implements Character{
 	{
 		List<String> hobbies = new ArrayList<String>();
 		hobbies.add("Nothing in particular, I guess.");
-		hobbies.add("I feel like I do nothing else with my life other than hanging out with my friends.");
+		hobbies.add("I feel like I do nothing else with my life other than hang out with my friends.");
 		hobbies.add("You wish I were a more interesting person.");
 		hobbies.add("What the heck? Do I have a hobby?");
 		int hobby = random.nextInt(hobbies.size());
 		System.out.println(hobbies.get(hobby));
 		
 		System.out.println("What's one of your hobbies?");
-		
 		u.setHobbies(console.next());	
 		System.out.println("");
 		
@@ -99,20 +98,12 @@ public class Tobias implements Character{
 		int familyMember = random.nextInt(family.size());
 		System.out.println(family.get(familyMember));
 		
-		System.out.println("Do you have any siblings or pets? Yes or no's fine.");
-		
-		if(console.next().equalsIgnoreCase("yes") || console.next().equalsIgnoreCase("no") || console.next().equals("yeah"))
-		{
-			u.setFamily(console.next());
-			System.out.println("");
+		System.out.println("Do you have any siblings or pets?");
+				
+		u.setFamily(console.next());
+		System.out.println("");
 			
-			guess();
-		}
-		else
-		{
-			System.out.println("What the heck? Was that a yes or no answer?");
-			family();
-		}
+		guess();
 		
 	}
 

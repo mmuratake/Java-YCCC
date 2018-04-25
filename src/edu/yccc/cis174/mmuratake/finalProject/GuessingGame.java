@@ -18,9 +18,11 @@ public class GuessingGame {
 		List<String> characterList = new ArrayList<String>();
 		characterList.add("Tobias");
 		//characterList.add("Samuel");
-		//characterList.add("Sara");
+		characterList.add("Sara");
 		//characterList.add("Violet");
 		int index = random.nextInt(characterList.size());
+		
+		rules();
 		
 		
 		// 2. Determines the rest of the game by choosing the character for good.
@@ -58,7 +60,7 @@ public class GuessingGame {
 		
 		
 		
-		return null;
+		return questions;
 	}
 	
 	
@@ -72,13 +74,16 @@ public class GuessingGame {
 	{
 		System.out.println("Have you played this game before?");
 		System.out.println("1.Yes    2.No");
-		if(console.next().equals("1"))
+		
+		String played = console.next();
+		
+		if(played.equals("1"))
 		{
-			System.out.println("Good luck. Press any key to continue.");
+			System.out.println("Good luck. Press any key to continue.\r\n");
 		}
-		else if(console.next().equals("2"))
+		else if(played.equals("2"))
 		{
-			System.out.println("Explain the rules.");
+			System.out.println("Explain the rules.\r\n");
 		}
 		else
 		{
