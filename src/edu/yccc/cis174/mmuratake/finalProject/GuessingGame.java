@@ -58,7 +58,7 @@ public class GuessingGame {
 		return questions;
 	}
 	
-	
+	// Forget all this for now: focus on being able to read from file.
 	public static void askQuestion()
 	{
 		List<String> questions = GuessingGame.loadQuestions();
