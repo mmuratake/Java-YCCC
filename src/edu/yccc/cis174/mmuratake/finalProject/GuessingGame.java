@@ -44,7 +44,7 @@ public class GuessingGame {
 		}
 	}
 	
-	public static List<String> askQuestions()
+	public static List<String> loadQuestions()
 	{
 		List<String> questions = new ArrayList<String>();
 		questions.add("What do you like?");
@@ -61,10 +61,34 @@ public class GuessingGame {
 	
 	public static void askQuestion()
 	{
-		List<String> questions = GuessingGame.askQuestions();
-		int index = random.nextInt(questions.size());
-		System.out.println(questions.get(index));
-		questions.remove(index);
+		List<String> questions = GuessingGame.loadQuestions();
+		while(!questions.isEmpty())
+		{
+			int index = random.nextInt(questions.size());
+			System.out.println(questions.get(index));
+			if(questions.get(index).equals("What do you like?"))
+			{
+				System.out.println("Likes question.");
+			}
+			if(questions.get(index).equals("What do you dislike?"))
+			{
+				System.out.println("Dislikes question.");
+			}
+			if(questions.get(index).equals("What are your hobbies?"))
+			{
+				System.out.println("Hobbies question.");
+			}
+			if(questions.get(index).equals("Who are you friends with?"))
+			{
+				System.out.println("Friends question.");
+			}
+			if(questions.get(index).equals("Who are your family members?"))
+			{
+				System.out.println("Family question.");
+			}
+			questions.remove(questions.get(index));
+		}
+		
 	}
 	
 	public static void rules()
