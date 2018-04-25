@@ -126,8 +126,10 @@ public class Tobias implements Character{
 			System.out.println("That ain't right. I'm Tobias. Think you can get me next time?");
 		}
 		
-		System.out.println("What's your name?");
+		System.out.println("\r\nWhat's your name?");
 		auq.u.setName(console.next().toUpperCase());
+		
+		// Guess the user before you write to file.
 		
 		WriteToFile wtf = new WriteToFile();
 		try 
