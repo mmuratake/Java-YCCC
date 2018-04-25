@@ -12,8 +12,6 @@ public class GuessingGame {
 	
 	public static void main(String[] args)
 	{
-		
-		
 		// 1. Choose a character (at random). Needs a list of characters, then chooses one randomly.
 		List<String> characterList = new ArrayList<String>();
 		characterList.add("Tobias");
@@ -46,7 +44,7 @@ public class GuessingGame {
 		}
 	}
 	
-	public List<String> askQuestions()
+	public static List<String> askQuestions()
 	{
 		List<String> questions = new ArrayList<String>();
 		questions.add("What do you like?");
@@ -54,9 +52,6 @@ public class GuessingGame {
 		questions.add("What are your hobbies?");
 		questions.add("Who are you friends with?");
 		questions.add("Who are your family members?");
-		
-		int index = random.nextInt(questions.size());
-		System.out.println(questions.get(index));
 		
 		
 		
@@ -66,8 +61,10 @@ public class GuessingGame {
 	
 	public static void askQuestion()
 	{
-		GuessingGame gg = new GuessingGame();
-		//gg.
+		List<String> questions = GuessingGame.askQuestions();
+		int index = random.nextInt(questions.size());
+		System.out.println(questions.get(index));
+		questions.remove(index);
 	}
 	
 	public static void rules()

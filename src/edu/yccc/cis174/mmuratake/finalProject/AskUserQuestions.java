@@ -12,14 +12,13 @@ public class AskUserQuestions {
 	{
 		System.out.println("What do you like?");
 		u.setLikes(console.nextLine().toLowerCase());
-		System.out.println(u.getLikes() + "");
+		System.out.println("");
 	}
 	
 	public void askDislikes()
 	{
 		System.out.println("What do you dislike?");
 		u.setDislikes(console.nextLine().toLowerCase());
-		System.out.println(u.getDislikes());
 		System.out.println("");
 	}
 	
@@ -27,7 +26,6 @@ public class AskUserQuestions {
 	{
 		System.out.println("What's one of your hobbies?");
 		u.setHobbies(console.nextLine().toLowerCase());	
-		System.out.println(u.getHobbies());
 		System.out.println("");
 	}
 	
@@ -35,7 +33,6 @@ public class AskUserQuestions {
 	{
 		System.out.println("What's the name of one of your friends?");
 		u.setFriends(console.nextLine().toLowerCase());
-		System.out.println(u.getFriends());
 		System.out.println("");
 	}
 	
@@ -43,7 +40,6 @@ public class AskUserQuestions {
 	{
 		System.out.println("Do you have any siblings or pets?");
 		u.setFamily(console.nextLine().toLowerCase());
-		System.out.println(u.getFamily());
 		System.out.println("");
 	}
 
