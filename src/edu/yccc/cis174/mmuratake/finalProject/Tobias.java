@@ -126,6 +126,9 @@ public class Tobias implements Character{
 			System.out.println("That ain't right. I'm Tobias. Think you can get me next time?");
 		}
 		
+		
+		// Guess the user here, and if you don't know, then
+		
 		System.out.println("\r\nWhat's your name?");
 		auq.u.setName(console.next().toUpperCase());
 		

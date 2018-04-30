@@ -10,12 +10,12 @@ public class WriteToFile {
 	{
 		FileWriter fStream = new FileWriter("GuessingGame.txt", true);
 		BufferedWriter writer = new BufferedWriter(fStream);
-		writer.write(userLikes + "\r\n");
-		writer.write(userDislikes + "\r\n");
-		writer.write(userHobby + "\r\n");
-		writer.write(userFriend + "\r\n");
-		writer.write(userFamily + "\r\n");
-		writer.write(userName);
+		writer.write("Likes: " + userLikes + "\r\n");
+		writer.write("Dislikes: " + userDislikes + "\r\n");
+		writer.write("Hobby: " + userHobby + "\r\n");
+		writer.write("Friend: " + userFriend + "\r\n");
+		writer.write("Family: " + userFamily + "\r\n");
+		writer.write("Name: " + userName);
 		writer.write("\r\n---------------------------------------------------------\r\n");
 		writer.close();
 	}

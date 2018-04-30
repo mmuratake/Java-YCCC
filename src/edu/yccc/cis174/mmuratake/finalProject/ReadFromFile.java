@@ -15,20 +15,18 @@ public class ReadFromFile {
 	 * 
 	 * GOAL 2: Calculate which name has the best matches.
 	 * 		Done.
-	 * 
-	 * 
-	 * @throws FileNotFoundException 
-	 * 
-	 * 
+	 * @throws FileNotFoundException
 	 * 
 	 */
 	
 	private static Random random = new Random();
 	
+	AskUserQuestions auq = new AskUserQuestions();
+	
 	List<String> guesses = new ArrayList<String>();
 
 	
-	public void readFile() throws FileNotFoundException
+	public void likesGuess() throws FileNotFoundException
 	{	
 		Scanner fileScanner = null;
 		
@@ -38,7 +36,7 @@ public class ReadFromFile {
 		// So something like this exists for every stat. Now they can be compared. 
 		while(fileScanner.hasNextLine())
 		{
-			if(fileScanner.nextLine().equals("Likes: " + "userLikes"))
+			if(fileScanner.nextLine().equals("Likes: " + auq.u.getLikes()))
 			{
 				fileScanner.findWithinHorizon("Name: ", 7);
 				String guessByLikes = fileScanner.nextLine();
@@ -47,13 +45,93 @@ public class ReadFromFile {
 			}
 		}
 		
+		fileScanner.close();
+	}
+	
+	public void dislikesGuess() throws FileNotFoundException
+	{	
+		Scanner fileScanner = null;
 		
+		fileScanner = new Scanner(new File("J:\\git\\Java-YCCC\\GuessingGame.txt"));
+		
+		while(fileScanner.hasNextLine())
+		{
+			if(fileScanner.nextLine().equals("Dislikes: " + auq.u.getDislikes()))
+			{
+				fileScanner.findWithinHorizon("Name: ", 6);
+				String guessByDislikes = fileScanner.nextLine();
+				System.out.println(guessByDislikes);
+				guesses.add(guessByDislikes);
+			}
+		}
+		
+		fileScanner.close();
+	}
+	
+	public void HobbiesGuess() throws FileNotFoundException
+	{	
+		Scanner fileScanner = null;
+		
+		fileScanner = new Scanner(new File("J:\\git\\Java-YCCC\\GuessingGame.txt"));
+		
+		while(fileScanner.hasNextLine())
+		{
+			if(fileScanner.nextLine().equals("Hobby: " + auq.u.getHobbies()))
+			{
+				fileScanner.findWithinHorizon("Name: ", 5);
+				String guessByHobby = fileScanner.nextLine();
+				System.out.println(guessByHobby);
+				guesses.add(guessByHobby);
+			}
+		}
+		
+		fileScanner.close();
+	}
+	
+	public void friendsGuess() throws FileNotFoundException
+	{	
+		Scanner fileScanner = null;
+		
+		fileScanner = new Scanner(new File("J:\\git\\Java-YCCC\\GuessingGame.txt"));
+		
+		while(fileScanner.hasNextLine())
+		{
+			if(fileScanner.nextLine().equals("Friend: " + auq.u.getFriends()))
+			{
+				fileScanner.findWithinHorizon("Name: ", 3);
+				String guessByFriend = fileScanner.nextLine();
+				System.out.println(guessByFriend);
+				guesses.add(guessByFriend);
+			}
+		}
+		
+		fileScanner.close();
+	}
+	
+	public void familyGuess() throws FileNotFoundException
+	{	
+		Scanner fileScanner = null;
+		
+		fileScanner = new Scanner(new File("J:\\git\\Java-YCCC\\GuessingGame.txt"));
+		
+		while(fileScanner.hasNextLine())
+		{
+			if(fileScanner.nextLine().equals("Family: " + auq.u.getFamily()))
+			{
+				fileScanner.findWithinHorizon("Name: ", 2);
+				String guessByFamily = fileScanner.nextLine();
+				System.out.println(guessByFamily);
+				guesses.add(guessByFamily);
+			}
+		}
 		
 		fileScanner.close();
 	}
 	
 	public void guessUser()
 	{
+		System.out.println("Now let me see if I can guess you.");
+
 		boolean guessedAlready = false;
 		
 		if(guesses.isEmpty()) 
