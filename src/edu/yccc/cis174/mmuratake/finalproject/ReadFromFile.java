@@ -28,7 +28,7 @@ public class ReadFromFile {
 	static Scanner console = new Scanner(System.in);
 
 	
-	public void readFromFile() throws FileNotFoundException
+	public void likesGuess() throws FileNotFoundException
 	{	
 		Scanner fileScanner = null;
 		
@@ -40,39 +40,12 @@ public class ReadFromFile {
 		{
 			if(fileScanner.nextLine().equals("Likes: " + auq.u.getLikes()))
 			{
-				fileScanner.findWithinHorizon("Name: ", 7);
+				fileScanner.findWithinHorizon("Name: ", 6);
 				String guessByLikes = fileScanner.nextLine();
 				System.out.println(guessByLikes);
 				guesses.add(guessByLikes);
 			}
-			if(fileScanner.nextLine().equals("Dislikes: " + auq.u.getDislikes()))
-			{
-				fileScanner.findWithinHorizon("Name: ", 6);
-				String guessByDislikes = fileScanner.nextLine();
-				System.out.println(guessByDislikes);
-				guesses.add(guessByDislikes);
-			}
-			if(fileScanner.nextLine().equals("Hobby: " + auq.u.getHobbies()))
-			{
-				fileScanner.findWithinHorizon("Name: ", 5);
-				String guessByHobby = fileScanner.nextLine();
-				System.out.println(guessByHobby);
-				guesses.add(guessByHobby);
-			}
-			if(fileScanner.nextLine().equals("Friend: " + auq.u.getFriends()))
-			{
-				fileScanner.findWithinHorizon("Name: ", 3);
-				String guessByFriend = fileScanner.nextLine();
-				System.out.println(guessByFriend);
-				guesses.add(guessByFriend);
-			}
-			if(fileScanner.nextLine().equals("Family: " + auq.u.getFamily()))
-			{
-				fileScanner.findWithinHorizon("Name: ", 2);
-				String guessByFamily = fileScanner.nextLine();
-				System.out.println(guessByFamily);
-				guesses.add(guessByFamily);
-			}
+			
 		}
 		fileScanner.close();
 	}
@@ -85,13 +58,19 @@ public class ReadFromFile {
 		
 		while(fileScanner.hasNextLine())
 		{
-			
+			if(fileScanner.nextLine().equals("Dislikes: " + auq.u.getDislikes()))
+			{
+				fileScanner.findWithinHorizon("Name: ", 5);
+				String guessByDislikes = fileScanner.nextLine();
+				System.out.println(guessByDislikes);
+				guesses.add(guessByDislikes);
+			}
 		}
 		
 		fileScanner.close();
 	}
 	
-	public void HobbiesGuess() throws FileNotFoundException
+	public void hobbiesGuess() throws FileNotFoundException
 	{	
 		Scanner fileScanner = null;
 		
@@ -99,7 +78,13 @@ public class ReadFromFile {
 		
 		while(fileScanner.hasNextLine())
 		{
-			
+			if(fileScanner.nextLine().equals("Hobby: " + auq.u.getHobbies()))
+			{
+				fileScanner.findWithinHorizon("Name: ", 4);
+				String guessByHobby = fileScanner.nextLine();
+				System.out.println(guessByHobby);
+				guesses.add(guessByHobby);
+			}
 		}
 		
 		fileScanner.close();
@@ -113,7 +98,13 @@ public class ReadFromFile {
 		
 		while(fileScanner.hasNextLine())
 		{
-			
+			if(fileScanner.nextLine().equals("Friend: " + auq.u.getFriends()))
+			{
+				fileScanner.findWithinHorizon("Name: ", 3);
+				String guessByFriend = fileScanner.nextLine();
+				System.out.println(guessByFriend);
+				guesses.add(guessByFriend);
+			}
 		}
 		
 		fileScanner.close();
@@ -127,7 +118,13 @@ public class ReadFromFile {
 		
 		while(fileScanner.hasNextLine())
 		{
-			
+			if(fileScanner.nextLine().equals("Family: " + auq.u.getFamily()))
+			{
+				fileScanner.findWithinHorizon("Name: ", 2);
+				String guessByFamily = fileScanner.nextLine();
+				System.out.println(guessByFamily);
+				guesses.add(guessByFamily);
+			}
 		}
 		
 		fileScanner.close();
@@ -140,7 +137,11 @@ public class ReadFromFile {
 		
 		try 
 		{
-			readFromFile();
+			likesGuess();
+			dislikesGuess();
+			hobbiesGuess();
+			friendsGuess();
+			familyGuess();
 		} 
 		catch (FileNotFoundException e) 
 		{
