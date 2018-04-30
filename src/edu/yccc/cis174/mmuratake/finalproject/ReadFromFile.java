@@ -159,7 +159,7 @@ public class ReadFromFile {
 
 			if (guesses.size() == 1) 
 			{
-				System.out.println("I guess you're " + guesses.get(0) + ".");
+				System.out.println("I guess you're " + guesses.get(0) + ". Am I right?");
 				guessedAlready = true;
 				break;
 			}
@@ -194,7 +194,7 @@ public class ReadFromFile {
 		if(guessedAlready == false)
 		{
 			int guess = random.nextInt(guesses.size());
-			System.out.println("I guess you're " + guesses.get(guess) + ".");
+			System.out.println("I guess you're " + guesses.get(guess) + ". Am I right?");
 		}
 	}
 
