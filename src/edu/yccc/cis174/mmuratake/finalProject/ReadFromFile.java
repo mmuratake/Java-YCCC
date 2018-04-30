@@ -24,15 +24,16 @@ public class ReadFromFile {
 	 */
 	
 	private static Random random = new Random();
+	
+	List<String> guesses = new ArrayList<String>();
 
 	
-	public static void test() throws FileNotFoundException
+	public void test() throws FileNotFoundException
 	{	
 		Scanner fileScanner = null;
 		
 		fileScanner = new Scanner(new File("J:\\git\\Java-YCCC\\EnglishTestQuestions.txt"));
 		
-		List<String> guesses = new ArrayList<String>();
 		
 		// So something like this exists for every stat. Now they can be compared. (Though that seems a royal pain in the @ss.)
 		while(fileScanner.hasNextLine())
@@ -46,6 +47,13 @@ public class ReadFromFile {
 			}
 		}
 		
+		
+		
+		fileScanner.close();
+	}
+	
+	public void guessUser()
+	{
 		boolean guessedAlready = false;
 		
 		if(guesses.isEmpty()) 
@@ -96,8 +104,6 @@ public class ReadFromFile {
 			int guess = random.nextInt(guesses.size());
 			System.out.println("I guess it's " + guesses.get(guess));
 		}
-		
-		fileScanner.close();
 	}
 
 }
