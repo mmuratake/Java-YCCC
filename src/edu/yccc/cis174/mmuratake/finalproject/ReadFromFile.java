@@ -24,6 +24,8 @@ public class ReadFromFile {
 	AskUserQuestions auq = new AskUserQuestions();
 	
 	List<String> guesses = new ArrayList<String>();
+	
+	static Scanner console = new Scanner(System.in);
 
 	
 	public void readFromFile() throws FileNotFoundException
@@ -71,9 +73,7 @@ public class ReadFromFile {
 				System.out.println(guessByFamily);
 				guesses.add(guessByFamily);
 			}
-			
 		}
-		
 		fileScanner.close();
 	}
 	
@@ -136,6 +136,7 @@ public class ReadFromFile {
 	public void guessUser()
 	{
 		System.out.println("Now let me see if I can guess you.");
+		console.next();
 		
 		try 
 		{
@@ -145,24 +146,25 @@ public class ReadFromFile {
 		{
 			e.printStackTrace();
 		}
-
-		boolean guessedAlready = false;
 		
-		if(guesses.isEmpty()) 
-		{
-			System.out.println("I don't have any guesses... Can you tell me who you are?");
-		}
 		// Because there are only five stats, and if all of them are equal, then that must be the person.
 		for (int x = 0; x < 6; x++) 
 		{
-			List<String> bestGuesses = new ArrayList<String>();
-
+			if(guesses.isEmpty()) 
+			{
+				System.out.println("I don't have any guesses... Can you tell me who you are?");
+				auq.u.setName(console.next().toUpperCase());
+				break;
+			}
+			
 			if (guesses.size() == 1) 
 			{
 				System.out.println("I guess you're " + guesses.get(0) + ". Am I right?");
-				guessedAlready = true;
 				break;
 			}
+			
+			List<String> bestGuesses = new ArrayList<String>();
+
 			if (guesses.size() > 1) 
 			{
 				for (int i = 0; i < guesses.size() - 1; i++) 
@@ -187,15 +189,13 @@ public class ReadFromFile {
 			
 			if(bestGuesses.isEmpty())
 			{
+				int guess = random.nextInt(guesses.size());
+				System.out.println("I guess you're " + guesses.get(guess) + ". Am I right?");
 				break;
 			}
 		}
 		
-		if(guessedAlready == false)
-		{
-			int guess = random.nextInt(guesses.size());
-			System.out.println("I guess you're " + guesses.get(guess) + ". Am I right?");
-		}
+		
 	}
 
 }
