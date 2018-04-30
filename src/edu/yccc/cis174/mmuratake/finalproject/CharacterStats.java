@@ -1,6 +1,9 @@
-package edu.yccc.cis174.mmuratake.finalProject;
+package edu.yccc.cis174.mmuratake.finalproject;
 
-public class User {
+public class CharacterStats {
+	
+	// I need a list to determine each of these stats, but these stats themselves are not lists. They are one word answers.
+	// Keeping this class for reference.
 	
 	String name;
 	String likes;
@@ -33,7 +36,7 @@ public class User {
 	{
 		this.dislikes = dislikes;
 	}
-	public String getHobbies()
+	public String getHobbies() 
 	{
 		return hobbies;
 	}
@@ -41,8 +44,8 @@ public class User {
 	{
 		this.hobbies = hobbies;
 	}
-	public String getFriends() 
-	{
+	public String getFriends()
+{
 		return friends;
 	}
 	public void setFriends(String friends) 

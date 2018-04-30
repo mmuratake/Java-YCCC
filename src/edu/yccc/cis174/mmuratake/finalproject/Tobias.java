@@ -1,4 +1,4 @@
-package edu.yccc.cis174.mmuratake.finalProject;
+package edu.yccc.cis174.mmuratake.finalproject;
 
 import java.io.IOException;
 import java.util.ArrayList;
