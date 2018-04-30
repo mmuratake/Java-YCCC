@@ -147,54 +147,80 @@ public class ReadFromFile {
 			e.printStackTrace();
 		}
 		
-		// Because there are only five stats, and if all of them are equal, then that must be the person.
-		for (int x = 0; x < 6; x++) 
+		if(guesses.isEmpty()) 
 		{
-			if(guesses.isEmpty()) 
-			{
-				System.out.println("I don't have any guesses... Can you tell me who you are?");
-				auq.u.setName(console.next().toUpperCase());
-				break;
-			}
-			
-			if (guesses.size() == 1) 
-			{
-				System.out.println("I guess you're " + guesses.get(0) + ". Am I right?");
-				break;
-			}
-			
-			List<String> bestGuesses = new ArrayList<String>();
+			System.out.println("I don't have any guesses... Can you tell me who you are?");
+			auq.u.setName(console.next().toUpperCase());
+		}
+		else
+		{
+			// Because there are only five stats, and if all of them are equal, then that must be the person.
+			int guess = random.nextInt(guesses.size());
 
-			if (guesses.size() > 1) 
+			for (int x = 0; x < 6; x++) 
 			{
-				for (int i = 0; i < guesses.size() - 1; i++) 
+
+				if (guesses.size() == 1) 
 				{
-					for (int k = i + 1; k < guesses.size(); k++) // Does this have to be less than or equal to guesses.size?
+					System.out.println("I guess you're " + guesses.get(guess) + ". Am I right?");
+					break;
+				}
+
+				List<String> bestGuesses = new ArrayList<String>();
+
+				if (guesses.size() > 1) 
+				{
+					for (int i = 0; i < guesses.size() - 1; i++) 
 					{
-						if (guesses.get(i) == guesses.get(k)) 
+						for (int k = i + 1; k < guesses.size(); k++) // Does this have to be less than or equal to guesses.size?
 						{
-							bestGuesses.add(guesses.get(i));
+							if (guesses.get(i) == guesses.get(k)) 
+							{
+								bestGuesses.add(guesses.get(i));
+							}
+							// break;
+							// May be needed to break out of this for loop. I don't know if having two for loops is okay.
 						}
-						// break;
-						// May be needed to break out of this for loop. I don't know if having two for loops is okay.
 					}
+				}
+
+				if (!bestGuesses.isEmpty()) 
+				{
+					guesses.clear();
+					guesses.addAll(bestGuesses);
+				}
+
+				if (bestGuesses.isEmpty()) 
+				{
+					System.out.println("I guess you're " + guesses.get(guess) + ". Am I right?");
+					break;
 				}
 			}
 			
-			if(!bestGuesses.isEmpty())
-			{
-				guesses.clear();
-				guesses.addAll(bestGuesses);
-			}
 			
-			if(bestGuesses.isEmpty())
+			boolean guessVerified = false;
+			// Ask if the guess is correct. 
+			while (guessVerified = false) 
 			{
-				int guess = random.nextInt(guesses.size());
-				System.out.println("I guess you're " + guesses.get(guess) + ". Am I right?");
-				break;
+				if (console.next().equalsIgnoreCase("Yes")) 
+				{
+					System.out.println("Sweet! I got you.");
+					auq.u.setName(guesses.get(guess).toUpperCase());
+					guessVerified = true;
+				}
+				else if (console.next().equalsIgnoreCase("No")) 
+				{
+					System.out.println("Too bad... I'll get you next time.");
+					System.out.println("Can you tell me who you are?");
+					auq.u.setName(console.next().toUpperCase());
+					guessVerified = true;
+				} 
+				else
+				{
+					System.out.println("What was that? Did I guess you correctly?");
+				}
 			}
 		}
-		
 		
 	}
 

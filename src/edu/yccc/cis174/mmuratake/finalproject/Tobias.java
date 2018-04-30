@@ -126,11 +126,9 @@ public class Tobias implements Character{
 			System.out.println("That ain't right. I'm Tobias. Think you can get me next time?");
 		}
 		
+		ReadFromFile rff = new ReadFromFile();
 		
-		// Guess the user here, and if you don't know, then
-		
-		System.out.println("\r\nWhat's your name?");
-		auq.u.setName(console.next().toUpperCase());
+		rff.guessUser();
 		
 		// Guess the user before you write to file.
 		
@@ -143,6 +141,8 @@ public class Tobias implements Character{
 		{
 			e.printStackTrace();
 		}
+		
+		System.out.println("Thanks for playing!");
 	}
 	
 }
