@@ -26,6 +26,8 @@ public class ReadFromFile {
 	List<String> guesses = new ArrayList<String>();
 	
 	static Scanner console = new Scanner(System.in);
+	
+	User u2 = new User();
 
 	
 	public void likesGuess() throws FileNotFoundException
@@ -38,11 +40,10 @@ public class ReadFromFile {
 		// So something like this exists for every stat. Now they can be compared. 
 		while(fileScanner.hasNextLine())
 		{
-			if(fileScanner.nextLine().equals("Likes: " + auq.u.getLikes()))
+			if(fileScanner.nextLine().equals("Likes: " + u2.getLikes()))
 			{
 				fileScanner.findWithinHorizon("Name: ", 6);
 				String guessByLikes = fileScanner.nextLine();
-				System.out.println(guessByLikes);
 				guesses.add(guessByLikes);
 			}
 			
@@ -58,11 +59,10 @@ public class ReadFromFile {
 		
 		while(fileScanner.hasNextLine())
 		{
-			if(fileScanner.nextLine().equals("Dislikes: " + auq.u.getDislikes()))
+			if(fileScanner.nextLine().equals("Dislikes: " + u2.getDislikes()))
 			{
 				fileScanner.findWithinHorizon("Name: ", 5);
 				String guessByDislikes = fileScanner.nextLine();
-				System.out.println(guessByDislikes);
 				guesses.add(guessByDislikes);
 			}
 		}
@@ -78,11 +78,10 @@ public class ReadFromFile {
 		
 		while(fileScanner.hasNextLine())
 		{
-			if(fileScanner.nextLine().equals("Hobby: " + auq.u.getHobbies()))
+			if(fileScanner.nextLine().equals("Hobby: " + u2.getHobbies()))
 			{
 				fileScanner.findWithinHorizon("Name: ", 4);
 				String guessByHobby = fileScanner.nextLine();
-				System.out.println(guessByHobby);
 				guesses.add(guessByHobby);
 			}
 		}
@@ -98,11 +97,10 @@ public class ReadFromFile {
 		
 		while(fileScanner.hasNextLine())
 		{
-			if(fileScanner.nextLine().equals("Friend: " + auq.u.getFriends()))
+			if(fileScanner.nextLine().equals("Friend: " + u2.getFriends()))
 			{
 				fileScanner.findWithinHorizon("Name: ", 3);
 				String guessByFriend = fileScanner.nextLine();
-				System.out.println(guessByFriend);
 				guesses.add(guessByFriend);
 			}
 		}
@@ -118,11 +116,10 @@ public class ReadFromFile {
 		
 		while(fileScanner.hasNextLine())
 		{
-			if(fileScanner.nextLine().equals("Family: " + auq.u.getFamily()))
+			if(fileScanner.nextLine().equals("Family: " + u2.getFamily()))
 			{
 				fileScanner.findWithinHorizon("Name: ", 2);
 				String guessByFamily = fileScanner.nextLine();
-				System.out.println(guessByFamily);
 				guesses.add(guessByFamily);
 			}
 		}
@@ -132,7 +129,7 @@ public class ReadFromFile {
 	
 	public void guessUser()
 	{
-		System.out.println("Now let me see if I can guess you.");
+		System.out.println("\r\nNow let me see if I can guess you.");
 		console.next();
 		
 		try 
@@ -201,8 +198,8 @@ public class ReadFromFile {
 			
 			boolean guessVerified = false;
 			// Ask if the guess is correct. 
-			while (guessVerified = false) 
-			{
+		//	while (guessVerified = false) 
+		//	{
 				if (console.next().equalsIgnoreCase("Yes")) 
 				{
 					System.out.println("Sweet! I got you.");
@@ -220,7 +217,7 @@ public class ReadFromFile {
 				{
 					System.out.println("What was that? Did I guess you correctly?");
 				}
-			}
+			//}
 		}
 		
 	}

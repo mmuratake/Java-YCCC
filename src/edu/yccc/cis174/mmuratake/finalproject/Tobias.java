@@ -128,6 +128,12 @@ public class Tobias implements Character{
 		
 		ReadFromFile rff = new ReadFromFile();
 		
+		rff.u2.setLikes(auq.u.getLikes());
+		rff.u2.setDislikes(auq.u.getDislikes());
+		rff.u2.setHobbies(auq.u.getHobbies());
+		rff.u2.setFriends(auq.u.getFriends());
+		rff.u2.setFamily(auq.u.getFamily());
+		
 		rff.guessUser();
 		
 		// Guess the user before you write to file.

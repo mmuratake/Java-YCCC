@@ -5,3 +5,24 @@ Friend: don't got any
 Family: no
 Name: MIKE
 ---------------------------------------------------------
+Likes: nothing
+Dislikes: reading
+Hobby: kids
+Friend: briar
+Family: no
+Name: null
+---------------------------------------------------------
+Likes: coke
+Dislikes: nothing
+Hobby: reading
+Friend: none
+Family: no
+Name: null
+---------------------------------------------------------
+Likes: nothing
+Dislikes: kids
+Hobby: kids
+Friend: none
+Family: yes
+Name: null
+---------------------------------------------------------
