@@ -28,17 +28,17 @@ public class ReadFromFile {
 	List<String> guesses = new ArrayList<String>();
 
 	
-	public void test() throws FileNotFoundException
+	public void readFile() throws FileNotFoundException
 	{	
 		Scanner fileScanner = null;
 		
-		fileScanner = new Scanner(new File("J:\\git\\Java-YCCC\\EnglishTestQuestions.txt"));
+		fileScanner = new Scanner(new File("J:\\git\\Java-YCCC\\GuessingGame.txt"));
 		
 		
-		// So something like this exists for every stat. Now they can be compared. (Though that seems a royal pain in the @ss.)
+		// So something like this exists for every stat. Now they can be compared. 
 		while(fileScanner.hasNextLine())
 		{
-			if(fileScanner.nextLine().equals("likes: " + "userLikes"))
+			if(fileScanner.nextLine().equals("Likes: " + "userLikes"))
 			{
 				fileScanner.findWithinHorizon("Name: ", 7);
 				String guessByLikes = fileScanner.nextLine();
@@ -58,7 +58,7 @@ public class ReadFromFile {
 		
 		if(guesses.isEmpty()) 
 		{
-			// "I don't know who you are."
+			System.out.println("I don't have any guesses... Can you tell me who you are?");
 		}
 		// Because there are only five stats, and if all of them are equal, then that must be the person.
 		for (int x = 0; x < 6; x++) 
@@ -67,7 +67,7 @@ public class ReadFromFile {
 
 			if (guesses.size() == 1) 
 			{
-				// "I guess it's you."
+				System.out.println("I guess you're " + guesses.get(0) + ".");
 				guessedAlready = true;
 				break;
 			}
@@ -102,7 +102,7 @@ public class ReadFromFile {
 		if(guessedAlready == false)
 		{
 			int guess = random.nextInt(guesses.size());
-			System.out.println("I guess it's " + guesses.get(guess));
+			System.out.println("I guess you're " + guesses.get(guess) + ".");
 		}
 	}
 
