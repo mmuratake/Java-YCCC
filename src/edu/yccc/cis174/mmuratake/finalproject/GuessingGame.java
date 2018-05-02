@@ -107,7 +107,15 @@ public class GuessingGame {
 		}
 		else if(played.equals("2"))
 		{
-			System.out.println("Explain the rules.\r\n");
+			System.out.println("This is a guessing game. "
+					+ "The point of the game is to guess who the character is you are talking to. "
+					+ "One randomly chosen character will tell you a little about him/herself. "
+					+ "You must guess the character based on your past play experiences. "
+					+ "Since you've never played before, this first round is impossible to win. "
+					+ "In addition, each character will try to guess you based on information you give them. "
+					+ "They will likewise use their past experience to figure out who you are. "
+					+ "See if you can guess them before they can start to guess you. "
+					+ "Good luck!\r\n");
 			console.next();
 			System.out.println("");
 			
