@@ -1,5 +1,11 @@
 package edu.yccc.cis174.mmuratake.finalproject;
 
+/**
+ * @author sMamiMuratake
+ * May 2 2018
+ * Final Project: Guessing Game
+ *
+ */
 public class User {
 	
 	String name;
@@ -57,7 +63,5 @@ public class User {
 	{
 		this.family = family;
 	}
-	
-	
 
 }

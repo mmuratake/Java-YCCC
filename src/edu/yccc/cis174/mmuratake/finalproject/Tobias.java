@@ -6,9 +6,18 @@ import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
+/**
+ * @author sMamiMuratake
+ * May 2 2018
+ * Final Project: Guessing Game
+ * Tobias' guessing game.
+ *
+ */
+
 public class Tobias implements Character{
 	
-	// Each character has a list of stats. One out of the list is chosen to determine which one is "set" for the round.
+	// Each character has a list of possible answers. 
+	// One out of the list is chosen to determine which answer they give this time.
 	
 	private static Random random = new Random();
 	static Scanner console = new Scanner(System.in);
@@ -16,7 +25,6 @@ public class Tobias implements Character{
 	AskUserQuestions auq = new AskUserQuestions();
 	
 	String guess;
-
 
 	public String name() 
 	{
@@ -36,7 +44,6 @@ public class Tobias implements Character{
 		
 		System.out.println("");
 		likes();
-		
 	}
 
 	public void likes() 
@@ -109,25 +116,28 @@ public class Tobias implements Character{
 		auq.askFamily();
 			
 		guess();
-		
 	}
 	
+	// Prompt the player to guess who they are and try to guess the player as well.
 	public void guess()
 	{
 		System.out.println("Now, can you guess who I am?");
 		
 		guess = console.next();
 		
+		// If the player guesses correctly.
 		if(guess.equalsIgnoreCase(name()))
 		{
 			System.out.println("You got it right. Nice!");
 			console.next();
 		}
+		// If the player answers "no, I can't guess you."
 		else if(guess.equalsIgnoreCase("No"))
 		{
-			System.out.println("I'm Tobias. Can ya get me next time?");
+			System.out.println("I'm Tobias. See if ya can get me next time.");
 			console.next();
 		}
+		// If the player guesses incorrectly.
 		else
 		{
 			System.out.println("That ain't right. I'm Tobias. Think you can get me next time?");
@@ -142,12 +152,13 @@ public class Tobias implements Character{
 		rff.u2.setFriends(auq.u.getFriends());
 		rff.u2.setFamily(auq.u.getFamily());
 		
-		// Tries to guess the user.
+		// Try to guess the player.
 		rff.guessUser();
 		
 		auq.u.setName(rff.u2.getName());
 				
 		WriteToFile wtf = new WriteToFile();
+		// Record the player's answers to try to guess them if they play again.
 		try 
 		{
 			wtf.writeUserStats(auq.u.getLikes(), auq.u.getDislikes(), auq.u.getHobbies(), auq.u.getFriends(), auq.u.getFamily(), auq.u.getName());

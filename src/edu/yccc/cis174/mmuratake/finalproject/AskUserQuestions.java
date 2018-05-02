@@ -2,6 +2,13 @@ package edu.yccc.cis174.mmuratake.finalproject;
 
 import java.util.Scanner;
 
+/**
+ * @author sMamiMuratake
+ * May 2 2018.
+ * Final Project: Guessing Game
+ * Ask the player (user) questions about themselves.
+ *
+ */
 public class AskUserQuestions {
 	
 	static Scanner console = new Scanner(System.in);

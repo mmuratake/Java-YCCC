@@ -95,6 +95,7 @@ public class GuessingGame {
 		
 	}
 	
+	// Attempt to explain the game to the user (if the user has not played before).
 	public static void rules()
 	{
 		System.out.println("Have you played this game before?");
@@ -102,14 +103,14 @@ public class GuessingGame {
 		
 		String played = console.next();
 		
-		if(played.equals("1"))
+		if(played.equals("1") || played.equalsIgnoreCase("yes"))
 		{
 			System.out.println("Good luck. Type anything to continue.");
 			console.next();
 			System.out.println("");
 			
 		}
-		else if(played.equals("2"))
+		else if(played.equals("2") || played.equalsIgnoreCase("no"))
 		{
 			System.out.println("This is a guessing game. "
 					+ "The point of the game is to guess who the character is you are talking to. "
