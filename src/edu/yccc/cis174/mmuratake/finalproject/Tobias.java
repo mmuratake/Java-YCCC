@@ -121,7 +121,7 @@ public class Tobias implements Character{
 	// Prompt the player to guess who they are and try to guess the player as well.
 	public void guess()
 	{
-		System.out.println("Now, can you guess who I am?");
+		System.out.println("Now, can ya guess who I am?");
 		
 		guess = console.next();
 		
@@ -168,7 +168,7 @@ public class Tobias implements Character{
 			e.printStackTrace();
 		}
 		
-		System.out.println("Thanks for playing! Maybe I'll see you again later.");
+		System.out.println("Thanks for playing. Maybe I'll see you again later.");
 	}
 	
 }

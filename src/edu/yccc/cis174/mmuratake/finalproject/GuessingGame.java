@@ -22,7 +22,7 @@ public class GuessingGame {
 		List<String> characterList = new ArrayList<String>();
 		characterList.add("Tobias");
 		//characterList.add("Samuel");
-		//characterList.add("Sara");
+		characterList.add("Sara");
 		//characterList.add("Violet");
 		int index = random.nextInt(characterList.size());
 		
