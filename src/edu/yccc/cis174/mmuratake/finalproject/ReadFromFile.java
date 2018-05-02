@@ -2,7 +2,6 @@ package edu.yccc.cis174.mmuratake.finalproject;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -11,6 +10,9 @@ import java.util.Scanner;
 public class ReadFromFile {
 	
 	/**
+	 * Mami Muratake
+	 * May 2 2018
+	 * Final Project: Guessing Game
 	 * 
 	 * @throws FileNotFoundException
 	 * 
@@ -126,6 +128,7 @@ public class ReadFromFile {
 		System.out.println("Now let me see if I can guess you.");
 		console.next();
 		
+		// Read from the file and see if any player before had any matching answers to the current player.
 		try 
 		{
 			likesGuess();
@@ -139,7 +142,7 @@ public class ReadFromFile {
 			e.printStackTrace();
 		}
 		
-		// If there are no matches of what the user has said to what has been recorded.
+		// If there are no matching answers from current player and previous players.
 		if(guesses.isEmpty()) 
 		{
 			System.out.println("I don't have any guesses... Can you tell me who you are?");
@@ -152,7 +155,7 @@ public class ReadFromFile {
 			// There are only five characteristics, so this only needs to loop five times.
 			for (int x = 0; x < 6; x++) 
 			{
-				// If there was only one match.
+				// If there was only one match, that person is the best guess.
 				if (guesses.size() == 1) 
 				{
 					System.out.println("I guess you're " + guesses.get(guess) + ". Am I right?");
@@ -197,14 +200,14 @@ public class ReadFromFile {
 				if (correct.equalsIgnoreCase("Yes")) 
 				{
 					System.out.println("Sweet! I got you.\r\n");
-					auq.u.setName(guesses.get(guess).toUpperCase());
+					u2.setName(guesses.get(guess).toUpperCase());
 					break;
 				}
 				else if (correct.equalsIgnoreCase("no")) 
 				{
 					System.out.println("Too bad... I'll get you next time.");
 					System.out.println("Can you tell me who you are?");
-					auq.u.setName(console.next().toUpperCase());
+					u2.setName(console.next().toUpperCase());
 					break;
 				} 
 				else
@@ -212,19 +215,6 @@ public class ReadFromFile {
 					System.out.println("What was that? Did I guess you correctly or not?");
 				}
 			}
-		}
-	}
-	
-	public void writeName()
-	{
-		WriteToFile wtf = new WriteToFile();
-		try 
-		{
-			wtf.writeUserName(auq.u.getName());
-		} 
-		catch (IOException e) 
-		{
-			e.printStackTrace();
 		}
 	}
 

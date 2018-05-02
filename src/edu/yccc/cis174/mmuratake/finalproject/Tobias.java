@@ -22,6 +22,22 @@ public class Tobias implements Character{
 	{
 		return "Tobias";
 	}
+	
+	public void greeting() 
+	{
+		List<String> greetings = new ArrayList<String>();
+		greetings.add("Hey. Do I know you? Let's start.");
+		greetings.add("Hey. You wanna start?");
+		greetings.add("Hey.");
+		int greetingPhrase = random.nextInt(greetings.size());
+		System.out.println(greetings.get(greetingPhrase));	
+		
+		console.nextLine();
+		
+		System.out.println("");
+		likes();
+		
+	}
 
 	public void likes() 
 	{
@@ -58,7 +74,7 @@ public class Tobias implements Character{
 		hobbies.add("Hobbies? Nothing in particular, I guess.");
 		hobbies.add("I feel like I do nothing else with my life other than hang out with my friends.");
 		hobbies.add("You wish I were a more interesting person.");
-		hobbies.add("What the heck? Do I have a hobby?");
+		hobbies.add("What the heck? Do I even have a hobby?");
 		int hobby = random.nextInt(hobbies.size());
 		System.out.println(hobbies.get(hobby));
 		
@@ -95,22 +111,6 @@ public class Tobias implements Character{
 		guess();
 		
 	}
-
-	public void greeting() 
-	{
-		List<String> greetings = new ArrayList<String>();
-		greetings.add("Hey. Do I know you? Let's start.");
-		greetings.add("Hey. You wanna start?");
-		greetings.add("Hey.");
-		int greetingPhrase = random.nextInt(greetings.size());
-		System.out.println(greetings.get(greetingPhrase));	
-		
-		console.nextLine();
-		
-		System.out.println("");
-		likes();
-		
-	}
 	
 	public void guess()
 	{
@@ -120,12 +120,18 @@ public class Tobias implements Character{
 		
 		if(guess.equalsIgnoreCase(name()))
 		{
-			System.out.println("Hey, you're right. Nice!");
+			System.out.println("You got it right. Nice!");
+			console.next();
+		}
+		else if(guess.equalsIgnoreCase("No"))
+		{
+			System.out.println("I'm Tobias. Can ya get me next time?");
 			console.next();
 		}
 		else
 		{
 			System.out.println("That ain't right. I'm Tobias. Think you can get me next time?");
+			console.next();
 		}
 		
 		ReadFromFile rff = new ReadFromFile();
@@ -136,13 +142,15 @@ public class Tobias implements Character{
 		rff.u2.setFriends(auq.u.getFriends());
 		rff.u2.setFamily(auq.u.getFamily());
 		
+		// Tries to guess the user.
 		rff.guessUser();
+		
+		auq.u.setName(rff.u2.getName());
 				
 		WriteToFile wtf = new WriteToFile();
 		try 
 		{
-			wtf.writeUserStats(auq.u.getLikes(), auq.u.getDislikes(), auq.u.getHobbies(), auq.u.getFriends(), auq.u.getFamily());
-			rff.writeName();
+			wtf.writeUserStats(auq.u.getLikes(), auq.u.getDislikes(), auq.u.getHobbies(), auq.u.getFriends(), auq.u.getFamily(), auq.u.getName());
 		} 
 		catch (IOException e) 
 		{
