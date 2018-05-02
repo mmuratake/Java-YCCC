@@ -23,7 +23,8 @@ public class GuessingGame {
 		characterList.add("Tobias");
 		//characterList.add("Samuel");
 		characterList.add("Sara");
-		//characterList.add("Violet");
+		characterList.add("Violet");
+		characterList.add("Prince");
 		int index = random.nextInt(characterList.size());
 		
 		rules();
@@ -33,9 +34,10 @@ public class GuessingGame {
 			Tobias t = new Tobias();
 			t.greeting();
 		}
-		if(characterList.get(index).equals("Samuel"))
+		if(characterList.get(index).equals("Prince"))
 		{
-			
+			Prince p = new Prince();
+			p.greeting();
 		}
 		if(characterList.get(index).equals("Sara"))
 		{
@@ -44,55 +46,9 @@ public class GuessingGame {
 		}
 		if(characterList.get(index).equals("Violet"))
 		{
-			
+			Violet v = new Violet();
+			v.greeting();
 		}
-	}
-	
-	public static List<String> loadQuestions()
-	{
-		List<String> questions = new ArrayList<String>();
-		questions.add("What do you like?");
-		questions.add("What do you dislike?");
-		questions.add("What are your hobbies?");
-		questions.add("Who are you friends with?");
-		questions.add("Who are your family members?");
-		
-		
-		
-		return questions;
-	}
-	
-	// Forget all this for now: focus on being able to read from file.
-	public static void askQuestion()
-	{
-		List<String> questions = GuessingGame.loadQuestions();
-		while(!questions.isEmpty())
-		{
-			int index = random.nextInt(questions.size());
-			System.out.println(questions.get(index));
-			if(questions.get(index).equals("What do you like?"))
-			{
-				System.out.println("Likes question.");
-			}
-			if(questions.get(index).equals("What do you dislike?"))
-			{
-				System.out.println("Dislikes question.");
-			}
-			if(questions.get(index).equals("What are your hobbies?"))
-			{
-				System.out.println("Hobbies question.");
-			}
-			if(questions.get(index).equals("Who are you friends with?"))
-			{
-				System.out.println("Friends question.");
-			}
-			if(questions.get(index).equals("Who are your family members?"))
-			{
-				System.out.println("Family question.");
-			}
-			questions.remove(questions.get(index));
-		}
-		
 	}
 	
 	// Attempt to explain the game to the user (if the user has not played before).
