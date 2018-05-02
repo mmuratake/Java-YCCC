@@ -9,6 +9,13 @@ import java.util.Scanner;
  * @author sMamiMuratake
  * May 2 2018
  * Final Project: Guessing Game
+ * 
+ * Acceptance Criteria:
+ * 1. Write to file
+ * 2. Read from file
+ * 3. Randomly generate each character's answers from a list
+ * 4. Use interface
+ * 5. Allow for a different experience every time the user plays
  *
  */
 public class GuessingGame {
@@ -21,7 +28,7 @@ public class GuessingGame {
 		// Chooses a character at random.
 		List<String> characterList = new ArrayList<String>();
 		characterList.add("Tobias");
-		//characterList.add("Samuel");
+		characterList.add("Samuel");
 		characterList.add("Sara");
 		characterList.add("Violet");
 		characterList.add("Prince");
@@ -49,6 +56,11 @@ public class GuessingGame {
 			Violet v = new Violet();
 			v.greeting();
 		}
+		if(characterList.get(index).equals("Samuel"))
+		{
+			Violet v = new Violet();
+			v.greeting();
+		}
 	}
 	
 	// Attempt to explain the game to the user (if the user has not played before).
@@ -71,7 +83,7 @@ public class GuessingGame {
 			System.out.println("This is a guessing game. "
 					+ "\r\nOne randomly chosen character will tell you a little about him/herself. "
 					+ "\r\nYou must guess the character based on your past play experiences. "
-					+ "\r\n		(Since you've never played before, this first round is impossible to win.) "
+					+ "\r\n	(Since you've never played before, this first round is impossible to win.) "
 					+ "\r\nIn addition, each character will try to guess you based on information you give them. "
 					+ "\r\nThey will likewise use their past experience to try to figure out who you are. "
 					+ "\r\nSee if you can guess them before they can start to guess you. "

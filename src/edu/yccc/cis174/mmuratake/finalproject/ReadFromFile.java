@@ -163,10 +163,14 @@ public class ReadFromFile {
 				// If there was only one match, that person is the best guess.
 				if (guesses.size() == 1) 
 				{
+					// If this gets hit the second time around, then the random variable must be chosen again to avoid
+					// picking an integer that's large than the size of the list (which is one value).
+					guess = random.nextInt(guesses.size());
 					System.out.println("I guess you're " + guesses.get(guess) + ". Am I right?");
 					break;
 				}
 
+				// A list to keep the best out of the possible guesses you have.
 				List<String> bestGuesses = new ArrayList<String>();
 
 				// If there were more than one matches.
@@ -179,7 +183,7 @@ public class ReadFromFile {
 						for (int k = i + 1; k < guesses.size(); k++) 
 						{
 							// ...and see if they're the same person. If they are, they're an even better guess.
-							if (guesses.get(i) == guesses.get(k)) 
+							if (guesses.get(i).equals(guesses.get(k)))
 							{
 								// Add that guess to a better guess list.
 								bestGuesses.add(guesses.get(i));
