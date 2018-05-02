@@ -5,6 +5,12 @@ import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
+/**
+ * @author sMamiMuratake
+ * May 2 2018
+ * Final Project: Guessing Game
+ *
+ */
 public class GuessingGame {
 	
 	private static Random random = new Random();
@@ -12,7 +18,7 @@ public class GuessingGame {
 	
 	public static void main(String[] args)
 	{
-		// 1. Choose a character (at random). Needs a list of characters, then chooses one randomly.
+		// Chooses a character at random.
 		List<String> characterList = new ArrayList<String>();
 		characterList.add("Tobias");
 		//characterList.add("Samuel");
@@ -22,8 +28,6 @@ public class GuessingGame {
 		
 		rules();
 		
-		
-		// 2. Determines the rest of the game by choosing the character for good.
 		if(characterList.get(index).equals("Tobias"))
 		{
 			Tobias t = new Tobias();
@@ -100,7 +104,7 @@ public class GuessingGame {
 		
 		if(played.equals("1"))
 		{
-			System.out.println("Good luck. Press any key to continue.");
+			System.out.println("Good luck. Type anything to continue.");
 			console.next();
 			System.out.println("");
 			
@@ -109,16 +113,15 @@ public class GuessingGame {
 		{
 			System.out.println("This is a guessing game. "
 					+ "The point of the game is to guess who the character is you are talking to. "
-					+ "One randomly chosen character will tell you a little about him/herself. "
-					+ "You must guess the character based on your past play experiences. "
-					+ "Since you've never played before, this first round is impossible to win. "
-					+ "In addition, each character will try to guess you based on information you give them. "
-					+ "They will likewise use their past experience to figure out who you are. "
-					+ "See if you can guess them before they can start to guess you. "
-					+ "Good luck!\r\n");
+					+ "\r\nOne randomly chosen character will tell you a little about him/herself. "
+					+ "\r\nYou must guess the character based on your past play experiences. "
+					+ "\r\nSince you've never played before, this first round is impossible to win. "
+					+ "\r\nIn addition, each character will try to guess you based on information you give them. "
+					+ "\r\nThey will likewise use their past experience to figure out who you are. "
+					+ "\r\nSee if you can guess them before they can start to guess you. "
+					+ "\r\nGood luck!\r\n");
 			console.next();
 			System.out.println("");
-			
 		}
 		else
 		{
