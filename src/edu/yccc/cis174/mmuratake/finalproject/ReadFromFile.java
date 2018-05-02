@@ -11,11 +11,7 @@ import java.util.Scanner;
 public class ReadFromFile {
 	
 	/**
-	 * GOAL: Match what's written in file to what the user has just said.
-	 * 		Done.
 	 * 
-	 * GOAL 2: Calculate which name has the best matches.
-	 * 		Done.
 	 * @throws FileNotFoundException
 	 * 
 	 */
@@ -36,9 +32,7 @@ public class ReadFromFile {
 		Scanner fileScanner = null;
 		
 		fileScanner = new Scanner(new File("J:\\git\\Java-YCCC\\GuessingGame.txt"));
-		
-		
-		// So something like this exists for every stat. Now they can be compared. 
+				
 		while(fileScanner.hasNextLine())
 		{
 			if(fileScanner.nextLine().equals("Likes: " + u2.getLikes()))
@@ -47,7 +41,6 @@ public class ReadFromFile {
 				String guessByLikes = fileScanner.nextLine();
 				guesses.add(guessByLikes);
 			}
-			
 		}
 		fileScanner.close();
 	}
@@ -146,6 +139,7 @@ public class ReadFromFile {
 			e.printStackTrace();
 		}
 		
+		// If there are no matches of what the user has said to what has been recorded.
 		if(guesses.isEmpty()) 
 		{
 			System.out.println("I don't have any guesses... Can you tell me who you are?");
@@ -153,12 +147,12 @@ public class ReadFromFile {
 		}
 		else
 		{
-			// Because there are only five stats, and if all of them are equal, then that must be the person.
 			int guess = random.nextInt(guesses.size());
 
+			// There are only five characteristics, so this only needs to loop five times.
 			for (int x = 0; x < 6; x++) 
 			{
-
+				// If there was only one match.
 				if (guesses.size() == 1) 
 				{
 					System.out.println("I guess you're " + guesses.get(guess) + ". Am I right?");
@@ -167,6 +161,7 @@ public class ReadFromFile {
 
 				List<String> bestGuesses = new ArrayList<String>();
 
+				// If there were more than one matches.
 				if (guesses.size() > 1) 
 				{
 					for (int i = 0; i < guesses.size() - 1; i++) 
