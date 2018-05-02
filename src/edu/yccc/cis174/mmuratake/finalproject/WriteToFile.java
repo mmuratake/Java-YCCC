@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class WriteToFile {
 	
-	public void writeUserStats(String userLikes, String userDislikes, String userHobby, String userFriend, String userFamily, String userName) throws IOException
+	public void writeUserStats(String userLikes, String userDislikes, String userHobby, String userFriend, String userFamily) throws IOException
 	{
 		FileWriter fStream = new FileWriter("GuessingGame.txt", true);
 		BufferedWriter writer = new BufferedWriter(fStream);
@@ -15,6 +15,13 @@ public class WriteToFile {
 		writer.write("Hobby: " + userHobby + "\r\n");
 		writer.write("Friend: " + userFriend + "\r\n");
 		writer.write("Family: " + userFamily + "\r\n");
+		writer.close();
+	}
+	
+	public void writeUserName(String userName) throws IOException
+	{
+		FileWriter fStream = new FileWriter("GuessingGame.txt", true);
+		BufferedWriter writer = new BufferedWriter(fStream);
 		writer.write("Name: " + userName);
 		writer.write("\r\n---------------------------------------------------------\r\n");
 		writer.close();

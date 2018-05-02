@@ -2,6 +2,7 @@ package edu.yccc.cis174.mmuratake.finalproject;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -42,7 +43,7 @@ public class ReadFromFile {
 		{
 			if(fileScanner.nextLine().equals("Likes: " + u2.getLikes()))
 			{
-				fileScanner.findWithinHorizon("Name: ", 6);
+				fileScanner.findWithinHorizon("Name: ", 0);
 				String guessByLikes = fileScanner.nextLine();
 				guesses.add(guessByLikes);
 			}
@@ -61,7 +62,7 @@ public class ReadFromFile {
 		{
 			if(fileScanner.nextLine().equals("Dislikes: " + u2.getDislikes()))
 			{
-				fileScanner.findWithinHorizon("Name: ", 5);
+				fileScanner.findWithinHorizon("Name: ", 0);
 				String guessByDislikes = fileScanner.nextLine();
 				guesses.add(guessByDislikes);
 			}
@@ -80,7 +81,7 @@ public class ReadFromFile {
 		{
 			if(fileScanner.nextLine().equals("Hobby: " + u2.getHobbies()))
 			{
-				fileScanner.findWithinHorizon("Name: ", 4);
+				fileScanner.findWithinHorizon("Name: ", 0);
 				String guessByHobby = fileScanner.nextLine();
 				guesses.add(guessByHobby);
 			}
@@ -99,7 +100,7 @@ public class ReadFromFile {
 		{
 			if(fileScanner.nextLine().equals("Friend: " + u2.getFriends()))
 			{
-				fileScanner.findWithinHorizon("Name: ", 3);
+				fileScanner.findWithinHorizon("Name: ", 0);
 				String guessByFriend = fileScanner.nextLine();
 				guesses.add(guessByFriend);
 			}
@@ -118,7 +119,7 @@ public class ReadFromFile {
 		{
 			if(fileScanner.nextLine().equals("Family: " + u2.getFamily()))
 			{
-				fileScanner.findWithinHorizon("Name: ", 2);
+				fileScanner.findWithinHorizon("Name: ", 0);
 				String guessByFamily = fileScanner.nextLine();
 				guesses.add(guessByFamily);
 			}
@@ -129,7 +130,7 @@ public class ReadFromFile {
 	
 	public void guessUser()
 	{
-		System.out.println("\r\nNow let me see if I can guess you.");
+		System.out.println("Now let me see if I can guess you.");
 		console.next();
 		
 		try 
@@ -170,14 +171,12 @@ public class ReadFromFile {
 				{
 					for (int i = 0; i < guesses.size() - 1; i++) 
 					{
-						for (int k = i + 1; k < guesses.size(); k++) // Does this have to be less than or equal to guesses.size?
+						for (int k = i + 1; k < guesses.size(); k++) 
 						{
 							if (guesses.get(i) == guesses.get(k)) 
 							{
 								bestGuesses.add(guesses.get(i));
 							}
-							// break;
-							// May be needed to break out of this for loop. I don't know if having two for loops is okay.
 						}
 					}
 				}
@@ -196,30 +195,42 @@ public class ReadFromFile {
 			}
 			
 			
-			boolean guessVerified = false;
 			// Ask if the guess is correct. 
-		//	while (guessVerified = false) 
-		//	{
-				if (console.next().equalsIgnoreCase("Yes")) 
+			for (int x = 0; x < 100; x++) 
+			{
+				String correct = console.next();
+				if (correct.equalsIgnoreCase("Yes")) 
 				{
-					System.out.println("Sweet! I got you.");
+					System.out.println("Sweet! I got you.\r\n");
 					auq.u.setName(guesses.get(guess).toUpperCase());
-					guessVerified = true;
+					break;
 				}
-				else if (console.next().equalsIgnoreCase("No")) 
+				else if (correct.equalsIgnoreCase("no")) 
 				{
 					System.out.println("Too bad... I'll get you next time.");
 					System.out.println("Can you tell me who you are?");
 					auq.u.setName(console.next().toUpperCase());
-					guessVerified = true;
+					break;
 				} 
 				else
 				{
-					System.out.println("What was that? Did I guess you correctly?");
+					System.out.println("What was that? Did I guess you correctly or not?");
 				}
-			//}
+			}
 		}
-		
+	}
+	
+	public void writeName()
+	{
+		WriteToFile wtf = new WriteToFile();
+		try 
+		{
+			wtf.writeUserName(auq.u.getName());
+		} 
+		catch (IOException e) 
+		{
+			e.printStackTrace();
+		}
 	}
 
 }

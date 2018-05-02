@@ -5,24 +5,52 @@ Friend: don't got any
 Family: no
 Name: MIKE
 ---------------------------------------------------------
-Likes: nothing
-Dislikes: reading
-Hobby: kids
-Friend: briar
-Family: no
-Name: null
+Likes: flowers
+Dislikes: cats
+Hobby: driving
+Friend: valence
+Family: a brother
+Name: OSHAN
 ---------------------------------------------------------
-Likes: coke
-Dislikes: nothing
-Hobby: reading
-Friend: none
-Family: no
-Name: null
----------------------------------------------------------
-Likes: nothing
+Likes: good people
 Dislikes: kids
+Hobby: music
+Friend: cam
+Family: a cat
+Name: HAPPY
+---------------------------------------------------------
+Likes: cats
+Dislikes: jokes
+Hobby: tennis
+Friend: maple
+Family: a dog
+Name: MIKE
+---------------------------------------------------------
+Likes: candy
+Dislikes: pollen
+Hobby: skydiving
+Friend: maurice
+Family: no
+Name: MAY
+---------------------------------------------------------
+Likes: dogs
+Dislikes: books
 Hobby: kids
-Friend: none
-Family: yes
-Name: null
+Friend: maple
+Family: none
+Name: VIOLET
+---------------------------------------------------------
+Likes: grapes
+Dislikes: nothing
+Hobby: kids
+Friend: maple
+Family: none
+Name: VIOLET
+---------------------------------------------------------
+Likes: bagels
+Dislikes: nothing
+Hobby: playing
+Friend: madam
+Family: mother
+Name: VIOLET
 ---------------------------------------------------------

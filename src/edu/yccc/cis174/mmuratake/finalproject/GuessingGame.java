@@ -103,10 +103,14 @@ public class GuessingGame {
 			System.out.println("Good luck. Press any key to continue.");
 			console.next();
 			System.out.println("");
+			
 		}
 		else if(played.equals("2"))
 		{
 			System.out.println("Explain the rules.\r\n");
+			console.next();
+			System.out.println("");
+			
 		}
 		else
 		{

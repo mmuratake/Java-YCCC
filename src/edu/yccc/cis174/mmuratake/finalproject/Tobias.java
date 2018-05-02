@@ -41,9 +41,9 @@ public class Tobias implements Character{
 	public void dislikes() 
 	{
 		List<String> dislikes = new ArrayList<String>();
-		dislikes.add("I'm not that good at reading. It bores me, I guess.");
+		dislikes.add("I'm not that good at reading. It bores me.");
 		dislikes.add("I don't do well with kids. They scare me, kinda.");
-		dislikes.add("Girls make me nervous. What am I supposed to say?");
+		dislikes.add("Older women make me nervous. What am I supposed to say?");
 		int dislike = random.nextInt(dislikes.size());
 		System.out.println(dislikes.get(dislike));
 		
@@ -55,7 +55,7 @@ public class Tobias implements Character{
 	public void hobbies() 
 	{
 		List<String> hobbies = new ArrayList<String>();
-		hobbies.add("Nothing in particular, I guess.");
+		hobbies.add("Hobbies? Nothing in particular, I guess.");
 		hobbies.add("I feel like I do nothing else with my life other than hang out with my friends.");
 		hobbies.add("You wish I were a more interesting person.");
 		hobbies.add("What the heck? Do I have a hobby?");
@@ -105,21 +105,23 @@ public class Tobias implements Character{
 		int greetingPhrase = random.nextInt(greetings.size());
 		System.out.println(greetings.get(greetingPhrase));	
 		
-		console.next();
-		System.out.println("");
+		console.nextLine();
 		
+		System.out.println("");
 		likes();
+		
 	}
 	
 	public void guess()
 	{
-		System.out.println("Can you guess who I am?");
+		System.out.println("Now, can you guess who I am?");
 		
 		guess = console.next();
 		
-		if(guess.equals(name()))
+		if(guess.equalsIgnoreCase(name()))
 		{
-			System.out.println("You're right. Nice!");
+			System.out.println("Hey, you're right. Nice!");
+			console.next();
 		}
 		else
 		{
@@ -135,20 +137,19 @@ public class Tobias implements Character{
 		rff.u2.setFamily(auq.u.getFamily());
 		
 		rff.guessUser();
-		
-		// Guess the user before you write to file.
-		
+				
 		WriteToFile wtf = new WriteToFile();
 		try 
 		{
-			wtf.writeUserStats(auq.u.getLikes(), auq.u.getDislikes(), auq.u.getHobbies(), auq.u.getFriends(), auq.u.getFamily(), auq.u.getName());
+			wtf.writeUserStats(auq.u.getLikes(), auq.u.getDislikes(), auq.u.getHobbies(), auq.u.getFriends(), auq.u.getFamily());
+			rff.writeName();
 		} 
 		catch (IOException e) 
 		{
 			e.printStackTrace();
 		}
 		
-		System.out.println("Thanks for playing!");
+		System.out.println("Thanks for playing! Maybe I'll see you again later.");
 	}
 	
 }
